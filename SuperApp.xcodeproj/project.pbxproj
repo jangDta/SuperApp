@@ -13,6 +13,7 @@
 		1340D0032772E01C000104B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0012772E01C000104B0 /* Main.storyboard */; };
 		1340D0052772E01E000104B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0042772E01E000104B0 /* Assets.xcassets */; };
 		1340D0082772E01E000104B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0062772E01E000104B0 /* LaunchScreen.storyboard */; };
+		1340D0112772E4C0000104B0 /* ModernRIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 1340D0102772E4C0000104B0 /* ModernRIBs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1340D0112772E4C0000104B0 /* ModernRIBs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = SuperApp;
+			packageProductDependencies = (
+				1340D0102772E4C0000104B0 /* ModernRIBs */,
+			);
 			productName = SuperApp;
 			productReference = 1340CFF82772E01C000104B0 /* SuperApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 1340CFEF2772E01C000104B0;
+			packageReferences = (
+				1340D00F2772E4C0000104B0 /* XCRemoteSwiftPackageReference "ModernRIBs" */,
+			);
 			productRefGroup = 1340CFF92772E01C000104B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1340D00F2772E4C0000104B0 /* XCRemoteSwiftPackageReference "ModernRIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DevYeom/ModernRIBs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1340D0102772E4C0000104B0 /* ModernRIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1340D00F2772E4C0000104B0 /* XCRemoteSwiftPackageReference "ModernRIBs" */;
+			productName = ModernRIBs;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1340CFF02772E01C000104B0 /* Project object */;
 }
