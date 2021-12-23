@@ -18,6 +18,16 @@ final class FinanceHomeViewController: UIViewController, FinanceHomePresentable,
 
     weak var listener: FinanceHomePresentableListener?
     
+    private let stackView: UIStackView = {
+       var stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 4
+        return stackView
+    }()
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         setupViews()
@@ -36,5 +46,21 @@ final class FinanceHomeViewController: UIViewController, FinanceHomePresentable,
             selectedImage: .init(systemName: "creditcard")
         )
         view.backgroundColor = .systemBackground
+        
+        // StackView 추가
+        view.addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+    
+    func addDashboard(_ view: ViewControllable) {
+        let vc = view.uiviewController
+        
+        addChild(vc)
+        stackView.addArrangedSubview(vc.view)
+        vc.didMove(toParent: self)
     }
 }

@@ -28,6 +28,11 @@
 		1340D03B2773FF57000104B0 /* FinanceHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0372773FF57000104B0 /* FinanceHomeViewController.swift */; };
 		1340D03C2773FF57000104B0 /* FinanceHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0382773FF57000104B0 /* FinanceHomeBuilder.swift */; };
 		1340D03D2773FF57000104B0 /* FinanceHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0392773FF57000104B0 /* FinanceHomeInteractor.swift */; };
+		1340D0432774054A000104B0 /* SuperPayDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D03F2774054A000104B0 /* SuperPayDashboardRouter.swift */; };
+		1340D0442774054A000104B0 /* SuperPayDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0402774054A000104B0 /* SuperPayDashboardViewController.swift */; };
+		1340D0452774054A000104B0 /* SuperPayDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0412774054A000104B0 /* SuperPayDashboardBuilder.swift */; };
+		1340D0462774054A000104B0 /* SuperPayDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0422774054A000104B0 /* SuperPayDashboardInteractor.swift */; };
+		1340D04927744985000104B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04827744985000104B0 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		1340D0372773FF57000104B0 /* FinanceHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeViewController.swift; sourceTree = "<group>"; };
 		1340D0382773FF57000104B0 /* FinanceHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeBuilder.swift; sourceTree = "<group>"; };
 		1340D0392773FF57000104B0 /* FinanceHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeInteractor.swift; sourceTree = "<group>"; };
+		1340D03F2774054A000104B0 /* SuperPayDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardRouter.swift; sourceTree = "<group>"; };
+		1340D0402774054A000104B0 /* SuperPayDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardViewController.swift; sourceTree = "<group>"; };
+		1340D0412774054A000104B0 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
+		1340D0422774054A000104B0 /* SuperPayDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardInteractor.swift; sourceTree = "<group>"; };
+		1340D04827744985000104B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +101,7 @@
 				1340D021277303D1000104B0 /* AppHome */,
 				1340D0352773FF33000104B0 /* FinanceHome */,
 				1340D01E2772F1FC000104B0 /* Utils */,
+				1340D0472774496F000104B0 /* Extensions */,
 				1340D0042772E01E000104B0 /* Assets.xcassets */,
 				1340D0062772E01E000104B0 /* LaunchScreen.storyboard */,
 				1340D0092772E01E000104B0 /* Info.plist */,
@@ -159,12 +170,32 @@
 		1340D0352773FF33000104B0 /* FinanceHome */ = {
 			isa = PBXGroup;
 			children = (
+				1340D03E27740526000104B0 /* SuperPayDashboard */,
 				1340D0362773FF57000104B0 /* FinanceHomeRouter.swift */,
 				1340D0372773FF57000104B0 /* FinanceHomeViewController.swift */,
 				1340D0382773FF57000104B0 /* FinanceHomeBuilder.swift */,
 				1340D0392773FF57000104B0 /* FinanceHomeInteractor.swift */,
 			);
 			path = FinanceHome;
+			sourceTree = "<group>";
+		};
+		1340D03E27740526000104B0 /* SuperPayDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				1340D03F2774054A000104B0 /* SuperPayDashboardRouter.swift */,
+				1340D0402774054A000104B0 /* SuperPayDashboardViewController.swift */,
+				1340D0412774054A000104B0 /* SuperPayDashboardBuilder.swift */,
+				1340D0422774054A000104B0 /* SuperPayDashboardInteractor.swift */,
+			);
+			path = SuperPayDashboard;
+			sourceTree = "<group>";
+		};
+		1340D0472774496F000104B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1340D04827744985000104B0 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,11 +278,13 @@
 				1340D0202772F20D000104B0 /* URLHandler.swift in Sources */,
 				1340D026277303FD000104B0 /* AppHomeRouter.swift in Sources */,
 				1340D02E27730A28000104B0 /* HomeWidgetView.swift in Sources */,
+				1340D0462774054A000104B0 /* SuperPayDashboardInteractor.swift in Sources */,
 				1340D03D2773FF57000104B0 /* FinanceHomeInteractor.swift in Sources */,
 				1340D027277303FD000104B0 /* AppHomeViewController.swift in Sources */,
 				1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */,
 				1340D03B2773FF57000104B0 /* FinanceHomeViewController.swift in Sources */,
 				1340D028277303FD000104B0 /* AppHomeBuilder.swift in Sources */,
+				1340D04927744985000104B0 /* UIView+Extension.swift in Sources */,
 				1340D0142772E905000104B0 /* AppComponent.swift in Sources */,
 				1340D03127730A4E000104B0 /* HomeWidgetModel.swift in Sources */,
 				1340D03A2773FF57000104B0 /* FinanceHomeRouter.swift in Sources */,
@@ -259,8 +292,11 @@
 				1340D03C2773FF57000104B0 /* FinanceHomeBuilder.swift in Sources */,
 				1340D01A2772E994000104B0 /* AppRootBuilder.swift in Sources */,
 				1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */,
+				1340D0442774054A000104B0 /* SuperPayDashboardViewController.swift in Sources */,
 				1340D029277303FD000104B0 /* AppHomeInteractor.swift in Sources */,
 				1340D01D2772EC1C000104B0 /* AppRootTabBarController.swift in Sources */,
+				1340D0452774054A000104B0 /* SuperPayDashboardBuilder.swift in Sources */,
+				1340D0432774054A000104B0 /* SuperPayDashboardRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

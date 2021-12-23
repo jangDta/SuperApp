@@ -1,5 +1,5 @@
 //
-//  FinanceHomeInteractor.swift
+//  SuperPayDashboardInteractor.swift
 //  SuperApp
 //
 //  Created by a60105114 on 2021/12/23.
@@ -7,28 +7,27 @@
 
 import ModernRIBs
 
-protocol FinanceHomeRouting: ViewableRouting {
+protocol SuperPayDashboardRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func attachSuperPayDashboard()
 }
 
-protocol FinanceHomePresentable: Presentable {
-    var listener: FinanceHomePresentableListener? { get set }
+protocol SuperPayDashboardPresentable: Presentable {
+    var listener: SuperPayDashboardPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol FinanceHomeListener: AnyObject {
+protocol SuperPayDashboardListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class FinanceHomeInteractor: PresentableInteractor<FinanceHomePresentable>, FinanceHomeInteractable, FinanceHomePresentableListener {
+final class SuperPayDashboardInteractor: PresentableInteractor<SuperPayDashboardPresentable>, SuperPayDashboardInteractable, SuperPayDashboardPresentableListener {
 
-    weak var router: FinanceHomeRouting?
-    weak var listener: FinanceHomeListener?
+    weak var router: SuperPayDashboardRouting?
+    weak var listener: SuperPayDashboardListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: FinanceHomePresentable) {
+    override init(presenter: SuperPayDashboardPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -36,7 +35,6 @@ final class FinanceHomeInteractor: PresentableInteractor<FinanceHomePresentable>
     override func didBecomeActive() {
         super.didBecomeActive()
         // TODO: Implement business logic here.
-        router?.attachSuperPayDashboard()
     }
 
     override func willResignActive() {

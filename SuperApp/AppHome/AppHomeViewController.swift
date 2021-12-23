@@ -56,8 +56,13 @@ final class AppHomeViewController: UIViewController, AppHomePresentable, AppHome
     }
     
     func updateWidget(_ viewModels: [HomeWidgetViewModel]) {
-        viewModels.forEach {
-            widgetStackView.addArrangedSubview(HomeWidgetView(viewModel: $0))
-        }
+        viewModels
+            .map {
+                HomeWidgetView(viewModel: $0)
+            }
+            .forEach {
+                $0.addShadowWithRoundedCorners(12)
+                widgetStackView.addArrangedSubview($0)
+            }
     }
 }

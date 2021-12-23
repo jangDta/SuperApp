@@ -12,7 +12,7 @@ protocol FinanceHomeDependency: Dependency {
     // created by this RIB.
 }
 
-final class FinanceHomeComponent: Component<FinanceHomeDependency> {
+final class FinanceHomeComponent: Component<FinanceHomeDependency>, SuperPayDashboardDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
@@ -34,6 +34,13 @@ final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHomeBuild
         let viewController = FinanceHomeViewController()
         let interactor = FinanceHomeInteractor(presenter: viewController)
         interactor.listener = listener
-        return FinanceHomeRouter(interactor: interactor, viewController: viewController)
+        
+        let superPayDashboard = SuperPayDashboardBuilder(dependency: component)
+        
+        return FinanceHomeRouter(
+            interactor: interactor,
+            viewController: viewController,
+            superPayDashboard: superPayDashboard
+        )
     }
 }
