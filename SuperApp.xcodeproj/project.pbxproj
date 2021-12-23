@@ -33,6 +33,8 @@
 		1340D0452774054A000104B0 /* SuperPayDashboardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0412774054A000104B0 /* SuperPayDashboardBuilder.swift */; };
 		1340D0462774054A000104B0 /* SuperPayDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0422774054A000104B0 /* SuperPayDashboardInteractor.swift */; };
 		1340D04927744985000104B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04827744985000104B0 /* UIView+Extension.swift */; };
+		1340D04C27744BAA000104B0 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 1340D04B27744BAA000104B0 /* CombineExt */; };
+		1340D04E27744BC8000104B0 /* Combine+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04D27744BC8000104B0 /* Combine+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,7 @@
 		1340D0412774054A000104B0 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
 		1340D0422774054A000104B0 /* SuperPayDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardInteractor.swift; sourceTree = "<group>"; };
 		1340D04827744985000104B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1340D04D27744BC8000104B0 /* Combine+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1340D04C27744BAA000104B0 /* CombineExt in Frameworks */,
 				1340D0112772E4C0000104B0 /* ModernRIBs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				1340D04827744985000104B0 /* UIView+Extension.swift */,
+				1340D04D27744BC8000104B0 /* Combine+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			name = SuperApp;
 			packageProductDependencies = (
 				1340D0102772E4C0000104B0 /* ModernRIBs */,
+				1340D04B27744BAA000104B0 /* CombineExt */,
 			);
 			productName = SuperApp;
 			productReference = 1340CFF82772E01C000104B0 /* SuperApp.app */;
@@ -247,6 +253,7 @@
 			mainGroup = 1340CFEF2772E01C000104B0;
 			packageReferences = (
 				1340D00F2772E4C0000104B0 /* XCRemoteSwiftPackageReference "ModernRIBs" */,
+				1340D04A27744BA9000104B0 /* XCRemoteSwiftPackageReference "CombineExt" */,
 			);
 			productRefGroup = 1340CFF92772E01C000104B0 /* Products */;
 			projectDirPath = "";
@@ -289,6 +296,7 @@
 				1340D03127730A4E000104B0 /* HomeWidgetModel.swift in Sources */,
 				1340D03A2773FF57000104B0 /* FinanceHomeRouter.swift in Sources */,
 				1340D0192772E994000104B0 /* AppRootRouter.swift in Sources */,
+				1340D04E27744BC8000104B0 /* Combine+Extension.swift in Sources */,
 				1340D03C2773FF57000104B0 /* FinanceHomeBuilder.swift in Sources */,
 				1340D01A2772E994000104B0 /* AppRootBuilder.swift in Sources */,
 				1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */,
@@ -518,6 +526,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		1340D04A27744BA9000104B0 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -525,6 +541,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1340D00F2772E4C0000104B0 /* XCRemoteSwiftPackageReference "ModernRIBs" */;
 			productName = ModernRIBs;
+		};
+		1340D04B27744BAA000104B0 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1340D04A27744BA9000104B0 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
