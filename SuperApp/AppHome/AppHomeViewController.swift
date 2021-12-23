@@ -30,13 +30,11 @@ final class AppHomeViewController: UIViewController, AppHomePresentable, AppHome
     
     init() {
       super.init(nibName: nil, bundle: nil)
-      
       setupViews()
     }
     
     required init?(coder: NSCoder) {
       super.init(coder: coder)
-      
       setupViews()
     }
     

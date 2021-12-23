@@ -24,6 +24,10 @@
 		1340D02B2773067E000104B0 /* NavigationControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D02A2773067E000104B0 /* NavigationControllable.swift */; };
 		1340D02E27730A28000104B0 /* HomeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D02D27730A28000104B0 /* HomeWidgetView.swift */; };
 		1340D03127730A4E000104B0 /* HomeWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D03027730A4E000104B0 /* HomeWidgetModel.swift */; };
+		1340D03A2773FF57000104B0 /* FinanceHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0362773FF57000104B0 /* FinanceHomeRouter.swift */; };
+		1340D03B2773FF57000104B0 /* FinanceHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0372773FF57000104B0 /* FinanceHomeViewController.swift */; };
+		1340D03C2773FF57000104B0 /* FinanceHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0382773FF57000104B0 /* FinanceHomeBuilder.swift */; };
+		1340D03D2773FF57000104B0 /* FinanceHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0392773FF57000104B0 /* FinanceHomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		1340D02A2773067E000104B0 /* NavigationControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllable.swift; sourceTree = "<group>"; };
 		1340D02D27730A28000104B0 /* HomeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgetView.swift; sourceTree = "<group>"; };
 		1340D03027730A4E000104B0 /* HomeWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgetModel.swift; sourceTree = "<group>"; };
+		1340D0362773FF57000104B0 /* FinanceHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeRouter.swift; sourceTree = "<group>"; };
+		1340D0372773FF57000104B0 /* FinanceHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeViewController.swift; sourceTree = "<group>"; };
+		1340D0382773FF57000104B0 /* FinanceHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeBuilder.swift; sourceTree = "<group>"; };
+		1340D0392773FF57000104B0 /* FinanceHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceHomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 				1340D0122772E8CA000104B0 /* AppDelegate */,
 				1340D0152772E96A000104B0 /* AppRoot */,
 				1340D021277303D1000104B0 /* AppHome */,
+				1340D0352773FF33000104B0 /* FinanceHome */,
 				1340D01E2772F1FC000104B0 /* Utils */,
 				1340D0042772E01E000104B0 /* Assets.xcassets */,
 				1340D0062772E01E000104B0 /* LaunchScreen.storyboard */,
@@ -145,6 +154,17 @@
 				1340D03027730A4E000104B0 /* HomeWidgetModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1340D0352773FF33000104B0 /* FinanceHome */ = {
+			isa = PBXGroup;
+			children = (
+				1340D0362773FF57000104B0 /* FinanceHomeRouter.swift */,
+				1340D0372773FF57000104B0 /* FinanceHomeViewController.swift */,
+				1340D0382773FF57000104B0 /* FinanceHomeBuilder.swift */,
+				1340D0392773FF57000104B0 /* FinanceHomeInteractor.swift */,
+			);
+			path = FinanceHome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,12 +247,16 @@
 				1340D0202772F20D000104B0 /* URLHandler.swift in Sources */,
 				1340D026277303FD000104B0 /* AppHomeRouter.swift in Sources */,
 				1340D02E27730A28000104B0 /* HomeWidgetView.swift in Sources */,
+				1340D03D2773FF57000104B0 /* FinanceHomeInteractor.swift in Sources */,
 				1340D027277303FD000104B0 /* AppHomeViewController.swift in Sources */,
 				1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */,
+				1340D03B2773FF57000104B0 /* FinanceHomeViewController.swift in Sources */,
 				1340D028277303FD000104B0 /* AppHomeBuilder.swift in Sources */,
 				1340D0142772E905000104B0 /* AppComponent.swift in Sources */,
 				1340D03127730A4E000104B0 /* HomeWidgetModel.swift in Sources */,
+				1340D03A2773FF57000104B0 /* FinanceHomeRouter.swift in Sources */,
 				1340D0192772E994000104B0 /* AppRootRouter.swift in Sources */,
+				1340D03C2773FF57000104B0 /* FinanceHomeBuilder.swift in Sources */,
 				1340D01A2772E994000104B0 /* AppRootBuilder.swift in Sources */,
 				1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */,
 				1340D029277303FD000104B0 /* AppHomeInteractor.swift in Sources */,
