@@ -8,7 +8,7 @@
 import ModernRIBs
 import UIKit
 
-protocol AppRootInteractable: Interactable {
+protocol AppRootInteractable: Interactable, AppHomeListener {
     var router: AppRootRouting? { get set }
     var listener: AppRootListener? { get set }
 }
@@ -20,16 +20,28 @@ protocol AppRootViewControllable: ViewControllable {
 final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControllable>, AppRootRouting {
     
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(
+    private let appHome: AppHomeBuildable
+    
+    init(
         interactor: AppRootInteractable,
-        viewController: AppRootViewControllable
+        viewController: AppRootViewControllable,
+        appHome: AppHomeBuildable
     ) {
+        self.appHome = appHome
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
-    
     func attachTabs() {
-        // TODO: - attach child tabs from router
+        // Child Router 추가
+        let appHomeRouting = appHome.build(withListener: interactor)
+        attachChild(appHomeRouting)
+        
+        // Child Router의 VC 추가
+        let viewControllers = [
+            NavigationControllable(root: appHomeRouting.viewControllable)
+        ]
+        
+        viewController.setViewControllers(viewControllers)
     }
 }

@@ -12,7 +12,7 @@ protocol AppRootDependency: Dependency {
     // created by this RIB.
 }
 
-final class AppRootComponent: Component<AppRootDependency> {
+final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency {
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
@@ -35,9 +35,12 @@ final class AppRootBuilder: Builder<AppRootDependency>, AppRootBuildable {
         
         let interactor = AppRootInteractor(presenter: tabBarController)
         
+        let appHome = AppHomeBuilder(dependency: component)
+        
         let router = AppRootRouter(
             interactor: interactor,
-            viewController: tabBarController
+            viewController: tabBarController,
+            appHome: appHome
         )
         return (router, interactor)
     }

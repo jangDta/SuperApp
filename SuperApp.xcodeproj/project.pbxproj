@@ -17,6 +17,13 @@
 		1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0182772E994000104B0 /* AppRootInteractor.swift */; };
 		1340D01D2772EC1C000104B0 /* AppRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D01C2772EC1C000104B0 /* AppRootTabBarController.swift */; };
 		1340D0202772F20D000104B0 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D01F2772F20D000104B0 /* URLHandler.swift */; };
+		1340D026277303FD000104B0 /* AppHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D022277303FD000104B0 /* AppHomeRouter.swift */; };
+		1340D027277303FD000104B0 /* AppHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D023277303FD000104B0 /* AppHomeViewController.swift */; };
+		1340D028277303FD000104B0 /* AppHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D024277303FD000104B0 /* AppHomeBuilder.swift */; };
+		1340D029277303FD000104B0 /* AppHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D025277303FD000104B0 /* AppHomeInteractor.swift */; };
+		1340D02B2773067E000104B0 /* NavigationControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D02A2773067E000104B0 /* NavigationControllable.swift */; };
+		1340D02E27730A28000104B0 /* HomeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D02D27730A28000104B0 /* HomeWidgetView.swift */; };
+		1340D03127730A4E000104B0 /* HomeWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D03027730A4E000104B0 /* HomeWidgetModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +38,13 @@
 		1340D0182772E994000104B0 /* AppRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootInteractor.swift; sourceTree = "<group>"; };
 		1340D01C2772EC1C000104B0 /* AppRootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootTabBarController.swift; sourceTree = "<group>"; };
 		1340D01F2772F20D000104B0 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
+		1340D022277303FD000104B0 /* AppHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeRouter.swift; sourceTree = "<group>"; };
+		1340D023277303FD000104B0 /* AppHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeViewController.swift; sourceTree = "<group>"; };
+		1340D024277303FD000104B0 /* AppHomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeBuilder.swift; sourceTree = "<group>"; };
+		1340D025277303FD000104B0 /* AppHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeInteractor.swift; sourceTree = "<group>"; };
+		1340D02A2773067E000104B0 /* NavigationControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllable.swift; sourceTree = "<group>"; };
+		1340D02D27730A28000104B0 /* HomeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgetView.swift; sourceTree = "<group>"; };
+		1340D03027730A4E000104B0 /* HomeWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgetModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 			children = (
 				1340D0122772E8CA000104B0 /* AppDelegate */,
 				1340D0152772E96A000104B0 /* AppRoot */,
+				1340D021277303D1000104B0 /* AppHome */,
 				1340D01E2772F1FC000104B0 /* Utils */,
 				1340D0042772E01E000104B0 /* Assets.xcassets */,
 				1340D0062772E01E000104B0 /* LaunchScreen.storyboard */,
@@ -98,8 +113,38 @@
 			isa = PBXGroup;
 			children = (
 				1340D01F2772F20D000104B0 /* URLHandler.swift */,
+				1340D02A2773067E000104B0 /* NavigationControllable.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		1340D021277303D1000104B0 /* AppHome */ = {
+			isa = PBXGroup;
+			children = (
+				1340D022277303FD000104B0 /* AppHomeRouter.swift */,
+				1340D023277303FD000104B0 /* AppHomeViewController.swift */,
+				1340D024277303FD000104B0 /* AppHomeBuilder.swift */,
+				1340D025277303FD000104B0 /* AppHomeInteractor.swift */,
+				1340D02F27730A41000104B0 /* Models */,
+				1340D02C27730A18000104B0 /* Views */,
+			);
+			path = AppHome;
+			sourceTree = "<group>";
+		};
+		1340D02C27730A18000104B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1340D02D27730A28000104B0 /* HomeWidgetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1340D02F27730A41000104B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1340D03027730A4E000104B0 /* HomeWidgetModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,12 +223,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1340D02B2773067E000104B0 /* NavigationControllable.swift in Sources */,
 				1340D0202772F20D000104B0 /* URLHandler.swift in Sources */,
+				1340D026277303FD000104B0 /* AppHomeRouter.swift in Sources */,
+				1340D02E27730A28000104B0 /* HomeWidgetView.swift in Sources */,
+				1340D027277303FD000104B0 /* AppHomeViewController.swift in Sources */,
 				1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */,
+				1340D028277303FD000104B0 /* AppHomeBuilder.swift in Sources */,
 				1340D0142772E905000104B0 /* AppComponent.swift in Sources */,
+				1340D03127730A4E000104B0 /* HomeWidgetModel.swift in Sources */,
 				1340D0192772E994000104B0 /* AppRootRouter.swift in Sources */,
 				1340D01A2772E994000104B0 /* AppRootBuilder.swift in Sources */,
 				1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */,
+				1340D029277303FD000104B0 /* AppHomeInteractor.swift in Sources */,
 				1340D01D2772EC1C000104B0 /* AppRootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
