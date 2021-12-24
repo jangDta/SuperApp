@@ -15,11 +15,11 @@ protocol SuperPayDashboardPresentableListener: AnyObject {
 }
 
 final class SuperPayDashboardViewController: UIViewController, SuperPayDashboardPresentable, SuperPayDashboardViewControllable {
-
+    
     weak var listener: SuperPayDashboardPresentableListener?
     
     private let headerStackView: UIStackView = {
-       let stackView = UIStackView()
+        let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.alignment = .fill
