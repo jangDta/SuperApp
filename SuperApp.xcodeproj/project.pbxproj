@@ -35,6 +35,7 @@
 		1340D04927744985000104B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04827744985000104B0 /* UIView+Extension.swift */; };
 		1340D04C27744BAA000104B0 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 1340D04B27744BAA000104B0 /* CombineExt */; };
 		1340D04E27744BC8000104B0 /* Combine+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04D27744BC8000104B0 /* Combine+Extension.swift */; };
+		1340D050277466F9000104B0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04F277466F9000104B0 /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		1340D0422774054A000104B0 /* SuperPayDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardInteractor.swift; sourceTree = "<group>"; };
 		1340D04827744985000104B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		1340D04D27744BC8000104B0 /* Combine+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Extension.swift"; sourceTree = "<group>"; };
+		1340D04F277466F9000104B0 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		1340D01E2772F1FC000104B0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1340D04F277466F9000104B0 /* Formatter.swift */,
 				1340D01F2772F20D000104B0 /* URLHandler.swift */,
 				1340D02A2773067E000104B0 /* NavigationControllable.swift */,
 			);
@@ -298,6 +301,7 @@
 				1340D0192772E994000104B0 /* AppRootRouter.swift in Sources */,
 				1340D04E27744BC8000104B0 /* Combine+Extension.swift in Sources */,
 				1340D03C2773FF57000104B0 /* FinanceHomeBuilder.swift in Sources */,
+				1340D050277466F9000104B0 /* Formatter.swift in Sources */,
 				1340D01A2772E994000104B0 /* AppRootBuilder.swift in Sources */,
 				1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */,
 				1340D0442774054A000104B0 /* SuperPayDashboardViewController.swift in Sources */,
