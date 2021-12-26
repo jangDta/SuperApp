@@ -12,7 +12,7 @@ protocol FinanceHomeDependency: Dependency {
     // created by this RIB.
 }
 
-final class FinanceHomeComponent: Component<FinanceHomeDependency>, SuperPayDashboardDependency, CardOnFileDashboardDependency {
+final class FinanceHomeComponent: Component<FinanceHomeDependency>, SuperPayDashboardDependency, CardOnFileDashboardDependency, AddPaymentMethodDependency {
     
     var balance: ReadOnlyCurrentValuePublisher<Double> { balancePublisher }
     private let balancePublisher: CurrentValuePublisher<Double>
@@ -55,12 +55,14 @@ final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHomeBuild
         
         let superPayDashboard = SuperPayDashboardBuilder(dependency: component)
         let cardOnFileDasahboard = CardOnFileDashboardBuilder(dependency: component)
+        let addPaymentMethod = AddPaymentMethodBuilder(dependency: component)
         
         return FinanceHomeRouter(
             interactor: interactor,
             viewController: viewController,
             superPayDashboard: superPayDashboard,
-            cardOnFileDashboard: cardOnFileDasahboard
+            cardOnFileDashboard: cardOnFileDasahboard,
+            addPaymentMethod: addPaymentMethod
         )
     }
 }
