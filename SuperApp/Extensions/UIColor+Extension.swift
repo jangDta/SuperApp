@@ -9,7 +9,6 @@ import UIKit
 
 extension UIColor {
     static var random: UIColor {
-        let rand = CGFloat(drand48())
-        return UIColor(red: rand, green: rand, blue: rand, alpha: 1)
+        return UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1)
     }
 }

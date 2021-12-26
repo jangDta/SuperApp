@@ -15,6 +15,7 @@ protocol CardOnFileDashboardRouting: ViewableRouting {
 protocol CardOnFileDashboardPresentable: Presentable {
     var listener: CardOnFileDashboardPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
+    func updatePayment(with viewModels: [PaymentViewModel])
 }
 
 protocol CardOnFileDashboardListener: AnyObject {
@@ -50,8 +51,9 @@ final class CardOnFileDashboardInteractor: PresentableInteractor<CardOnFileDashb
         super.didBecomeActive()
         
         dependency.cardOnFileRepository.cardOnFile
-            .sink { models in
-                // presenter updatePayments
+            .sink { [weak self] models in
+                let viewModels = models.prefix(5).map { PaymentViewModel($0) }
+                self?.presenter.updatePayment(with: viewModels)
             }
             .store(in: &cancellables)
     }

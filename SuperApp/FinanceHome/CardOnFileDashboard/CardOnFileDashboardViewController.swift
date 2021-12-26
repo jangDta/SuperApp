@@ -78,7 +78,6 @@ final class CardOnFileDashboardViewController: UIViewController, CardOnFileDashb
         headerStackView.addArrangedSubview(seeAllButton)
         
         view.addSubview(cardOnFileStackView)
-        cardOnFileStackView.addArrangedSubview(addPaymentButton)
         
         NSLayoutConstraint.activate([
             headerStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
@@ -92,6 +91,21 @@ final class CardOnFileDashboardViewController: UIViewController, CardOnFileDashb
             
             addPaymentButton.heightAnchor.constraint(equalToConstant: 60)
         ])
+    }
+    
+    func updatePayment(with viewModels: [PaymentViewModel]) {
+        cardOnFileStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        let views = viewModels.map { PaymentView(viewModel: $0) }
+        views.forEach {
+            $0.roundCorners()
+            cardOnFileStackView.addArrangedSubview($0)
+        }
+        
+        cardOnFileStackView.addArrangedSubview(addPaymentButton)
+        
+        let heightConstraints = views.map { $0.heightAnchor.constraint(equalToConstant: 60) }
+        NSLayoutConstraint.activate(heightConstraints)
     }
     
     // MARK: - 전체보기
