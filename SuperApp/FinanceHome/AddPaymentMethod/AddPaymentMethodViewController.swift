@@ -83,12 +83,7 @@ final class AddPaymentMethodViewController: UIViewController, AddPaymentMethodPr
     private func setupViews() {
         title = "카드 추가"
         view.backgroundColor = .systemBackground
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "xmark", withConfiguration: UIImage.SymbolConfiguration(pointSize: 18, weight: .semibold)),
-            style: .plain,
-            target: self,
-            action: #selector(didTapClose)
-        )
+        setNavigtaionItem(target: self, action: #selector(didTapClose))
         
         view.addSubview(cardNumberTextField)
         view.addSubview(stackView)
@@ -118,7 +113,7 @@ final class AddPaymentMethodViewController: UIViewController, AddPaymentMethodPr
     }
     
     @objc
-    func didTapAddCard() {
+    private func didTapAddCard() {
         if let number = cardNumberTextField.text,
            let cvc = cvcTextField.text,
            let expiration = expirationTextField.text {
@@ -127,7 +122,7 @@ final class AddPaymentMethodViewController: UIViewController, AddPaymentMethodPr
     }
     
     @objc
-    func didTapClose() {
+    private func didTapClose() {
         listener?.didTapClose()
     }
 }
