@@ -64,6 +64,10 @@ final class FinanceHomeInteractor: PresentableInteractor<FinanceHomePresentable>
         router?.detachAddPaymentMethod()
     }
     
+    func addPaymentMethodDidAddCard(_ model: PaymentModel) {
+        router?.detachAddPaymentMethod()
+    }
+    
     // MARK: - AdaptivePresentationControllerDelegate
     
     func presentationControllerDidDismiss() {

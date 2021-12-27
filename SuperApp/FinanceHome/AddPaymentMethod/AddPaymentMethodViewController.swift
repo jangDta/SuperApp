@@ -13,6 +13,7 @@ protocol AddPaymentMethodPresentableListener: AnyObject {
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
     func didTapClose()
+    func didConfirm(number: String, cvc: String, expiration: String)
 }
 
 final class AddPaymentMethodViewController: UIViewController, AddPaymentMethodPresentable, AddPaymentMethodViewControllable {
@@ -75,6 +76,10 @@ final class AddPaymentMethodViewController: UIViewController, AddPaymentMethodPr
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     private func setupViews() {
         title = "카드 추가"
         view.backgroundColor = .systemBackground
@@ -114,7 +119,11 @@ final class AddPaymentMethodViewController: UIViewController, AddPaymentMethodPr
     
     @objc
     func didTapAddCard() {
-        
+        if let number = cardNumberTextField.text,
+           let cvc = cvcTextField.text,
+           let expiration = expirationTextField.text {
+            listener?.didConfirm(number: number, cvc: cvc, expiration: expiration)
+        }
     }
     
     @objc

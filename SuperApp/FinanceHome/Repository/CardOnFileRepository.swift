@@ -6,9 +6,18 @@
 //
 
 import Foundation
+import Combine
+
+struct AddPaymentMethodInfo {
+    let number: String
+    let cvc: String
+    let expiration: String
+}
 
 protocol CardOnFileRepository {
     var cardOnFile: ReadOnlyCurrentValuePublisher<[PaymentModel]> { get }
+    
+    func addCard(_ info: AddPaymentMethodInfo) -> AnyPublisher<PaymentModel, Error>
 }
 
 final class CardOnFileRepositoryImpl: CardOnFileRepository {
@@ -19,7 +28,15 @@ final class CardOnFileRepositoryImpl: CardOnFileRepository {
         PaymentModel(id: "0", name: "신한은행", digits: "1234", color: "#f19a38ff", isPrimary: false),
         PaymentModel(id: "1", name: "국민은행", digits: "5678", color: "#3478f6ff", isPrimary: false),
         PaymentModel(id: "2", name: "우리은행", digits: "1357", color: "#78c5f5ff", isPrimary: false),
-        PaymentModel(id: "3", name: "하나은행", digits: "2468", color: "#65c466ff", isPrimary: false),
-        PaymentModel(id: "4", name: "카카오뱅크", digits: "9876", color: "#ffcc00ff", isPrimary: false)
     ])
+    
+    func addCard(_ info: AddPaymentMethodInfo) -> AnyPublisher<PaymentModel, Error> {
+        let model = PaymentModel(id: "", name: "새 카드", digits: String(info.number.suffix(4)), color: "", isPrimary: false)
+        
+        var new = paymentSubject.value
+        new.append(model)
+        paymentSubject.send(new)
+        
+        return Just(model).setFailureType(to: Error.self).eraseToAnyPublisher()
+    }
 }
