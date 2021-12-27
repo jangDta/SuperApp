@@ -7,7 +7,7 @@
 
 import ModernRIBs
 
-protocol TopupInteractable: Interactable, AddPaymentMethodListener, EnterAmountListener {
+protocol TopupInteractable: Interactable, AddPaymentMethodListener, EnterAmountListener, CardOnFileListener {
     var router: TopupRouting? { get set }
     var listener: TopupListener? { get set }
     
@@ -30,16 +30,21 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
     
     private let enterAmount: EnterAmountBuildable
     private var enterAmountRouting: Routing?
+    
+    private let cardOnFile: CardOnFileBuildable
+    private var cardOnFileRouting: Routing?
 
     init(
         interactor: TopupInteractable,
         viewController: ViewControllable,
         addPaymentMethod: AddPaymentMethodBuildable,
-        enterAmount: EnterAmountBuildable
+        enterAmount: EnterAmountBuildable,
+        cardOnFile: CardOnFileBuildable
     ) {
         self.viewController = viewController
         self.addPaymentMethod = addPaymentMethod
         self.enterAmount = enterAmount
+        self.cardOnFile = cardOnFile
         super.init(interactor: interactor)
         interactor.router = self
     }
@@ -97,6 +102,29 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
         
         detachChild(router)
         enterAmountRouting = nil
+    }
+    
+    func attachCardOnFile() {
+        if cardOnFileRouting != nil {
+            return
+        }
+        
+        let router = cardOnFile.build(withListener: interactor)
+        navigationControllable?.pushViewController(router.viewControllable, animated: true)
+        
+        cardOnFileRouting = router
+        attachChild(router)
+    }
+    
+    func detachCardOnFile() {
+        guard let router = cardOnFileRouting else {
+            return
+        }
+        
+        navigationControllable?.popViewController(animated: true)
+        
+        detachChild(router)
+        cardOnFileRouting = nil
     }
     
     private func presentInsideNavigation(_ viewControllable: ViewControllable) {

@@ -13,6 +13,8 @@ protocol TopupRouting: Routing {
     func detachAddPaymentMethod()
     func attachEnterAmount()
     func detachEnterAmount()
+    func attachCardOnFile()
+    func detachCardOnFile()
 }
 
 protocol TopupListener: AnyObject {
@@ -78,6 +80,16 @@ final class TopupInteractor: Interactor, TopupInteractable, AdaptivePresentation
     func enterAmountDidTapClose() {
         router?.detachEnterAmount()
         listener?.topupDidClose()
+    }
+    
+    func enterAmountDidTapPaymentMethod() {
+        router?.attachCardOnFile()
+    }
+    
+    // MARK: - CardOnFile Listener
+    
+    func cardOnFileDidTapClose() {
+        router?.detachCardOnFile()
     }
     
     // MARK: - AdaptivePresentationControllerDelegate

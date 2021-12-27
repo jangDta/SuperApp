@@ -13,7 +13,7 @@ protocol TopupDependency: Dependency {
     var cardOnFileRepository: CardOnFileRepository { get }
 }
 
-final class TopupComponent: Component<TopupDependency>, TopupInteractorDependency, AddPaymentMethodDependency, EnterAmountDependency {
+final class TopupComponent: Component<TopupDependency>, TopupInteractorDependency, AddPaymentMethodDependency, EnterAmountDependency, CardOnFileDependency {
     fileprivate var topupBaseViewController: ViewControllable {
         return dependency.topupBaseViewController
     }
@@ -40,12 +40,14 @@ final class TopupBuilder: Builder<TopupDependency>, TopupBuildable {
         
         let addPaymentMethod = AddPaymentMethodBuilder(dependency: component)
         let enterAmount = EnterAmountBuilder(dependency: component)
+        let cardOnFile = CardOnFileBuilder(dependency: component)
         
         return TopupRouter(
             interactor: interactor,
             viewController: component.topupBaseViewController,
             addPaymentMethod: addPaymentMethod,
-            enterAmount: enterAmount
+            enterAmount: enterAmount,
+            cardOnFile: cardOnFile
         )
     }
 }

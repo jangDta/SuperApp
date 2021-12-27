@@ -8,9 +8,27 @@
 import UIKit
 
 extension UIViewController {
-    func setNavigtaionItem(target: Any?, action: Selector?) {
+    
+    enum DismissButtonType {
+        case back
+        case close
+        
+        var iconSystemName: String {
+            switch self {
+                case .back:
+                    return "chevron.backward"
+                case .close:
+                    return "xmark"
+            }
+        }
+    }
+    
+    func setNavigtaionItem(type: DismissButtonType, target: Any?, action: Selector?) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "xmark", withConfiguration: UIImage.SymbolConfiguration(pointSize: 18, weight: .semibold)),
+            image: UIImage(
+                systemName: type.iconSystemName,
+                withConfiguration: UIImage.SymbolConfiguration(pointSize: 18, weight: .semibold)
+            ),
             style: .plain,
             target: target,
             action: action
