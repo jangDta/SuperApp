@@ -13,7 +13,7 @@ protocol TopupRouting: Routing {
     func detachAddPaymentMethod()
     func attachEnterAmount()
     func detachEnterAmount()
-    func attachCardOnFile()
+    func attachCardOnFile(payments: [PaymentModel])
     func detachCardOnFile()
 }
 
@@ -36,6 +36,10 @@ final class TopupInteractor: Interactor, TopupInteractable, AdaptivePresentation
     
     private let dependency: TopupInteractorDependency
     let presentationDelegateProxy: AdaptivePresentationControllerDelegateProxy
+    
+    private var payments: [PaymentModel] {
+        dependency.cardOnFileRepository.cardOnFile.value
+    }
     
     init(dependency: TopupInteractorDependency) {
         self.presentationDelegateProxy = AdaptivePresentationControllerDelegateProxy()
@@ -83,7 +87,7 @@ final class TopupInteractor: Interactor, TopupInteractable, AdaptivePresentation
     }
     
     func enterAmountDidTapPaymentMethod() {
-        router?.attachCardOnFile()
+        router?.attachCardOnFile(payments: payments)
     }
     
     // MARK: - CardOnFile Listener
