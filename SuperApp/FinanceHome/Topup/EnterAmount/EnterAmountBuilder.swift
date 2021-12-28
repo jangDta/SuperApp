@@ -10,11 +10,12 @@ import ModernRIBs
 protocol EnterAmountDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
+    var selectedPayment: ReadOnlyCurrentValuePublisher<PaymentModel> { get }
 }
 
-final class EnterAmountComponent: Component<EnterAmountDependency> {
-
+final class EnterAmountComponent: Component<EnterAmountDependency>, EnterAmountInteractorDependency {
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    var selectedPayment: ReadOnlyCurrentValuePublisher<PaymentModel> { dependency.selectedPayment }
 }
 
 // MARK: - Builder
@@ -32,7 +33,10 @@ final class EnterAmountBuilder: Builder<EnterAmountDependency>, EnterAmountBuild
     func build(withListener listener: EnterAmountListener) -> EnterAmountRouting {
         let component = EnterAmountComponent(dependency: dependency)
         let viewController = EnterAmountViewController()
-        let interactor = EnterAmountInteractor(presenter: viewController)
+        let interactor = EnterAmountInteractor(
+            presenter: viewController,
+            dependency: component
+        )
         interactor.listener = listener
         return EnterAmountRouter(interactor: interactor, viewController: viewController)
     }

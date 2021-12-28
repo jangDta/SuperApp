@@ -20,6 +20,8 @@ protocol CardOnFilePresentable: Presentable {
 protocol CardOnFileListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     func cardOnFileDidTapClose()
+    func cardOnFileDidTapAddCard()
+    func cardOnFileDidTapSelectCard(at index: Int)
 }
 
 final class CardOnFileInteractor: PresentableInteractor<CardOnFilePresentable>, CardOnFileInteractable, CardOnFilePresentableListener {
@@ -57,7 +59,13 @@ final class CardOnFileInteractor: PresentableInteractor<CardOnFilePresentable>, 
         listener?.cardOnFileDidTapClose()
     }
     
-    func didSelectItem(at: Int) {
-        
+    func didSelectItem(at index: Int) {
+        if index >= payments.count {
+            // 카드 추가하기
+            listener?.cardOnFileDidTapAddCard()
+        } else {
+            // 카드 선택하기
+            listener?.cardOnFileDidTapSelectCard(at: index)
+        }
     }
 }

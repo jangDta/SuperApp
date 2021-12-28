@@ -19,6 +19,17 @@ final class TopupComponent: Component<TopupDependency>, TopupInteractorDependenc
     }
     
     var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }
+    
+    var selectedPayment: ReadOnlyCurrentValuePublisher<PaymentModel> { selectedPaymentStream }
+    let selectedPaymentStream: CurrentValuePublisher<PaymentModel>
+    
+    init(
+        dependency: TopupDependency,
+        selectedPaymentStream: CurrentValuePublisher<PaymentModel>
+    ) {
+        self.selectedPaymentStream = selectedPaymentStream
+        super.init(dependency: dependency)
+    }
 }
 
 // MARK: - Builder
@@ -34,7 +45,11 @@ final class TopupBuilder: Builder<TopupDependency>, TopupBuildable {
     }
 
     func build(withListener listener: TopupListener) -> TopupRouting {
-        let component = TopupComponent(dependency: dependency)
+        let selectedPaymentStream = CurrentValuePublisher(
+            PaymentModel(id: "", name: "", digits: "", color: "", isPrimary: false)
+        )
+        
+        let component = TopupComponent(dependency: dependency, selectedPaymentStream: selectedPaymentStream)
         let interactor = TopupInteractor(dependency: component)
         interactor.listener = listener
         

@@ -10,7 +10,7 @@ import UIKit
 
 protocol CardOnFilePresentableListener: AnyObject {
     func didTapClose()
-    func didSelectItem(at: Int)
+    func didSelectItem(at index: Int)
 }
 
 final class CardOnFileViewController: UIViewController, CardOnFilePresentable, CardOnFileViewControllable, UITableViewDataSource, UITableViewDelegate {
