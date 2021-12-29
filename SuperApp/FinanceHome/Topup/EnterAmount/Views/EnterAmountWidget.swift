@@ -44,7 +44,7 @@ final class EnterAmountWidget: UIView {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
     textField.borderStyle = .none
-    textField.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+    textField.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
     textField.textAlignment = .right
     textField.keyboardType = .numberPad
     return textField
@@ -53,7 +53,7 @@ final class EnterAmountWidget: UIView {
   private let currencyLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+    label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
     label.text = "원"
     return label
   }()
@@ -67,6 +67,7 @@ final class EnterAmountWidget: UIView {
       titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
       titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
       titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+      currencyLabel.widthAnchor.constraint(equalToConstant: 20),
       amountStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
       amountStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
       amountStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
