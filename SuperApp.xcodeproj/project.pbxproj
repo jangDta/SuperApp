@@ -68,6 +68,7 @@
 		157D6AEB2778954500B07355 /* AddPaymentMethodBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AE72778954500B07355 /* AddPaymentMethodBuilder.swift */; };
 		157D6AEC2778954500B07355 /* AddPaymentMethodInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AE82778954500B07355 /* AddPaymentMethodInteractor.swift */; };
 		157D6AEE2778A05500B07355 /* AdaptivePresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AED2778A05500B07355 /* AdaptivePresentationControllerDelegate.swift */; };
+		157D6AF0277D6A6F00B07355 /* SuperPayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AEF277D6A6F00B07355 /* SuperPayRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		157D6AE72778954500B07355 /* AddPaymentMethodBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodBuilder.swift; sourceTree = "<group>"; };
 		157D6AE82778954500B07355 /* AddPaymentMethodInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodInteractor.swift; sourceTree = "<group>"; };
 		157D6AED2778A05500B07355 /* AdaptivePresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptivePresentationControllerDelegate.swift; sourceTree = "<group>"; };
+		157D6AEF277D6A6F00B07355 /* SuperPayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				1340D06527755E13000104B0 /* CardOnFileRepository.swift */,
+				157D6AEF277D6A6F00B07355 /* SuperPayRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				157D6AF0277D6A6F00B07355 /* SuperPayRepository.swift in Sources */,
 				1340D07627797BFF000104B0 /* EnterAmountRouter.swift in Sources */,
 				1340D02B2773067E000104B0 /* NavigationControllable.swift in Sources */,
 				1340D0202772F20D000104B0 /* URLHandler.swift in Sources */,

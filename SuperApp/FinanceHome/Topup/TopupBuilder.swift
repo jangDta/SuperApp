@@ -11,6 +11,7 @@ protocol TopupDependency: Dependency {
     // Topup RIB을 띄운 RIB에서 지정해줄 ViewControllable
     var topupBaseViewController: ViewControllable { get }
     var cardOnFileRepository: CardOnFileRepository { get }
+    var superPayRepository: SuperPayRepository { get }
 }
 
 final class TopupComponent: Component<TopupDependency>, TopupInteractorDependency, AddPaymentMethodDependency, EnterAmountDependency, CardOnFileDependency {
@@ -19,6 +20,7 @@ final class TopupComponent: Component<TopupDependency>, TopupInteractorDependenc
     }
     
     var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }
+    var superPayRepository: SuperPayRepository { dependency.superPayRepository }
     
     var selectedPayment: ReadOnlyCurrentValuePublisher<PaymentModel> { selectedPaymentStream }
     let selectedPaymentStream: CurrentValuePublisher<PaymentModel>

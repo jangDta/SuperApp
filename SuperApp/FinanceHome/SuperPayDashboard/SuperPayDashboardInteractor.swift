@@ -56,6 +56,7 @@ final class SuperPayDashboardInteractor: PresentableInteractor<SuperPayDashboard
         
         // 잔액
         dependency.balance
+            .receive(on: DispatchQueue.main)
             .map {
                 NSNumber(value: $0)
             }

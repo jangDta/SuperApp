@@ -82,6 +82,10 @@ final class FinanceHomeInteractor: PresentableInteractor<FinanceHomePresentable>
         router?.detachTopup()
     }
     
+    func topupDidFinish() {
+        router?.detachTopup()
+    }
+    
     // MARK: - AdaptivePresentationControllerDelegate
     
     func presentationControllerDidDismiss() {

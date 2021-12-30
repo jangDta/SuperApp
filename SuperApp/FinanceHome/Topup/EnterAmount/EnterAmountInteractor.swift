@@ -5,6 +5,7 @@
 //  Created by a60105114 on 2021/12/27.
 //
 
+import Foundation
 import ModernRIBs
 import Combine
 
@@ -16,16 +17,20 @@ protocol EnterAmountPresentable: Presentable {
     var listener: EnterAmountPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
     func updateSelectedPaymentMethod(with viewModel: SelectedPaymentMethodViewModel)
+    func startLoading()
+    func stopLoading()
 }
 
 protocol EnterAmountListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     func enterAmountDidTapClose()
     func enterAmountDidTapPaymentMethod()
+    func enterAmountDidFinishTopup()
 }
 
 protocol EnterAmountInteractorDependency {
     var selectedPayment: ReadOnlyCurrentValuePublisher<PaymentModel> { get }
+    var superPayRepository: SuperPayRepository { get }
 }
 
 final class EnterAmountInteractor: PresentableInteractor<EnterAmountPresentable>, EnterAmountInteractable, EnterAmountPresentableListener {
@@ -78,5 +83,19 @@ final class EnterAmountInteractor: PresentableInteractor<EnterAmountPresentable>
     
     func didTapTopup(with amount: Double) {
         // 잔액 충전
+        presenter.startLoading()
+        
+        dependency.superPayRepository.topup(
+            amount: amount,
+            paymentMethodID: dependency.selectedPayment.value.id
+        )
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.presenter.stopLoading()
+            } receiveValue: { [weak self] _ in
+                self?.listener?.enterAmountDidFinishTopup()
+            }
+            .store(in: &cancellables)
+
     }
 }

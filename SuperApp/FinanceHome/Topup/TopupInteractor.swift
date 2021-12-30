@@ -20,6 +20,7 @@ protocol TopupRouting: Routing {
 protocol TopupListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     func topupDidClose()
+    func topupDidFinish()
 }
 
 protocol TopupInteractorDependency {
@@ -90,6 +91,10 @@ final class TopupInteractor: Interactor, TopupInteractable, AdaptivePresentation
     
     func enterAmountDidTapPaymentMethod() {
         router?.attachCardOnFile(payments: payments)
+    }
+    
+    func enterAmountDidFinishTopup() {
+        listener?.topupDidFinish()
     }
     
     // MARK: - CardOnFile Listener
