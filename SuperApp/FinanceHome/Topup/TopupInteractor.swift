@@ -78,8 +78,9 @@ final class TopupInteractor: Interactor, TopupInteractable, AdaptivePresentation
     }
     
     func addPaymentMethodDidAddCard(_ model: PaymentModel) {
-        router?.detachAddPaymentMethod()
-        listener?.topupDidClose()
+        // 카드 추가 후 잔액 충전으로 이동
+        dependency.selectedPaymentStream.send(model)
+        router?.attachEnterAmount()
     }
     
     // MARK: - EnterAmount Listener
