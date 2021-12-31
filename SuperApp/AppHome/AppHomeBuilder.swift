@@ -12,7 +12,7 @@ protocol AppHomeDependency: Dependency {
     // created by this RIB.
 }
 
-final class AppHomeComponent: Component<AppHomeDependency> {
+final class AppHomeComponent: Component<AppHomeDependency>, TransportHomeDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
@@ -34,6 +34,13 @@ final class AppHomeBuilder: Builder<AppHomeDependency>, AppHomeBuildable {
         let viewController = AppHomeViewController()
         let interactor = AppHomeInteractor(presenter: viewController)
         interactor.listener = listener
-        return AppHomeRouter(interactor: interactor, viewController: viewController)
+        
+        let transportHome = TransportHomeBuilder(dependency: component)
+        
+        return AppHomeRouter(
+            interactor: interactor,
+            viewController: viewController,
+            transportHome: transportHome
+        )
     }
 }

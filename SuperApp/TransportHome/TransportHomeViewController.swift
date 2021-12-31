@@ -107,6 +107,7 @@ final class TransportHomeViewController: UIViewController, TransportHomePresenta
         button.setTitle("슈퍼택시 호출하기", for: .normal)
         button.backgroundColor = .systemRed
         button.tintColor = .white
+        button.roundCorners()
         button.addTarget(self, action: #selector(didTapRideConfirmButton), for: .touchUpInside)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         return button
@@ -152,7 +153,7 @@ final class TransportHomeViewController: UIViewController, TransportHomePresenta
             mapView.topAnchor.constraint(equalTo: view.topAnchor),
             mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mapView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.7),
+            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             searchView.leadingAnchor.constraint(equalTo: backButton.trailingAnchor, constant: 10),
             searchView.centerYAnchor.constraint(equalTo: backButton.centerYAnchor),
@@ -168,7 +169,7 @@ final class TransportHomeViewController: UIViewController, TransportHomePresenta
             rideInfoPane.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             rideInfoPane.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             rideInfoPane.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            rideInfoPane.topAnchor.constraint(equalTo: mapView.bottomAnchor),
+            rideInfoPane.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3),
             
             backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             backButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),

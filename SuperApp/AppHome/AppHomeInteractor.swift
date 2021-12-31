@@ -9,6 +9,8 @@ import ModernRIBs
 
 protocol AppHomeRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func attachTransportHome()
+    func detachTransportHome()
 }
 
 protocol AppHomePresentable: Presentable {
@@ -39,7 +41,9 @@ final class AppHomeInteractor: PresentableInteractor<AppHomePresentable>, AppHom
         
         let homeWidgetViewModels = [
             HomeWidgetViewModel(
-                HomeWidgetModel(title: "슈퍼택시", imageName: "car", tapHandler: {})
+                HomeWidgetModel(title: "슈퍼택시", imageName: "car", tapHandler: { [weak self] in
+                    self?.router?.attachTransportHome()
+                })
             ),
             HomeWidgetViewModel(
                 HomeWidgetModel(title: "슈퍼마트", imageName: "cart", tapHandler: {})
@@ -52,5 +56,9 @@ final class AppHomeInteractor: PresentableInteractor<AppHomePresentable>, AppHom
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func transportHomeDidTapClose() {
+        router?.detachTransportHome()
     }
 }
