@@ -82,7 +82,7 @@ final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHo
             return
         }
         
-        let router = addPaymentMethod.build(withListener: interactor)
+        let router = addPaymentMethod.build(withListener: interactor, dismissButtonType: .close)
         let navigationControllable = NavigationControllable(root: router.viewControllable)
         navigationControllable.navigationController.presentationController?.delegate = interactor.presentationDelegateProxy
         viewControllable.present(navigationControllable, animated: true, completion: nil)
@@ -116,7 +116,7 @@ final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHo
             return
         }
         
-        router.detachChild(router)
+        detachChild(router)
         topupRouting = nil
     }
 }

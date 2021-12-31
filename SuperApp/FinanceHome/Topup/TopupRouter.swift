@@ -54,7 +54,7 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
         // it may have added to the view hierarchy, when its interactor is deactivated.
         if viewController.uiviewController.presentedViewController != nil,
            navigationControllable != nil {
-            navigationControllable?.dismiss(animated: false, completion: nil)
+            navigationControllable?.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -63,12 +63,12 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
         resetChildRouting()
     }
     
-    func attachAddPaymentMethod() {
+    func attachAddPaymentMethod(dismissButtonType: DismissButtonType) {
         if addPaymentMethodRouting != nil {
             return
         }
         
-        let router = addPaymentMethod.build(withListener: interactor)
+        let router = addPaymentMethod.build(withListener: interactor, dismissButtonType: dismissButtonType)
         
         if let navigation = navigationControllable {
             // 네비게이션 스택에 push
@@ -86,7 +86,7 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
             return
         }
         
-        dismissPresentedNavigation(completion: nil)
+        navigationControllable?.popViewController(animated: true)
         
         detachChild(router)
         addPaymentMethodRouting = nil
