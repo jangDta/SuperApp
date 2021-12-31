@@ -8,7 +8,7 @@
 import ModernRIBs
 import UIKit
 
-protocol AppRootInteractable: Interactable, AppHomeListener, FinanceHomeListener {
+protocol AppRootInteractable: Interactable, AppHomeListener, FinanceHomeListener, ProfileHomeListener {
     var router: AppRootRouting? { get set }
     var listener: AppRootListener? { get set }
 }
@@ -22,15 +22,18 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
     // TODO: Constructor inject child builder protocols to allow building children.
     private let appHome: AppHomeBuildable
     private let financeHome: FinanceHomeBuildable
+    private let profileHome: ProfileHomeBuildable
     
     init(
         interactor: AppRootInteractable,
         viewController: AppRootViewControllable,
         appHome: AppHomeBuildable,
-        financeHome: FinanceHomeBuildable
+        financeHome: FinanceHomeBuildable,
+        profileHome: ProfileHomeBuildable
     ) {
         self.appHome = appHome
         self.financeHome = financeHome
+        self.profileHome = profileHome
         
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
@@ -44,10 +47,14 @@ final class AppRootRouter: LaunchRouter<AppRootInteractable, AppRootViewControll
         let financeHomeRouting = financeHome.build(withListener: interactor)
         attachChild(financeHomeRouting)
         
+        let profileHomeRouting = profileHome.build(withListener: interactor)
+        attachChild(profileHomeRouting)
+        
         // Child Router의 VC 추가
         let viewControllers = [
             NavigationControllable(root: appHomeRouting.viewControllable),
-            NavigationControllable(root: financeHomeRouting.viewControllable)
+            NavigationControllable(root: financeHomeRouting.viewControllable),
+            NavigationControllable(root: profileHomeRouting.viewControllable)
         ]
         
         viewController.setViewControllers(viewControllers)

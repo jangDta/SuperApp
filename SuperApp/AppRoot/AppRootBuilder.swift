@@ -12,7 +12,7 @@ protocol AppRootDependency: Dependency {
     // created by this RIB.
 }
 
-final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, FinanceHomeDependency {
+final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, FinanceHomeDependency, ProfileHomeDependency {
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
@@ -37,12 +37,14 @@ final class AppRootBuilder: Builder<AppRootDependency>, AppRootBuildable {
         
         let appHome = AppHomeBuilder(dependency: component)
         let financeHome = FinanceHomeBuilder(dependency: component)
+        let profileHome = ProfileHomeBuilder(dependency: component)
         
         let router = AppRootRouter(
             interactor: interactor,
             viewController: tabBarController,
             appHome: appHome,
-            financeHome: financeHome
+            financeHome: financeHome,
+            profileHome: profileHome
         )
         return (router, interactor)
     }
