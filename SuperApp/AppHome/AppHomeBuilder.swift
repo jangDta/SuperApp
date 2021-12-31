@@ -8,13 +8,13 @@
 import ModernRIBs
 
 protocol AppHomeDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+    var cardOnFileRepository: CardOnFileRepository { get }
+    var superPayRepository: SuperPayRepository { get }
 }
 
 final class AppHomeComponent: Component<AppHomeDependency>, TransportHomeDependency {
-
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }
+    var superPayRepository: SuperPayRepository { dependency.superPayRepository }
 }
 
 // MARK: - Builder
