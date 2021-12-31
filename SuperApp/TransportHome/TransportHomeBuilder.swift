@@ -7,7 +7,7 @@ protocol TransportHomeDependency: Dependency {
     var superPayRepository: SuperPayRepository { get }
 }
 
-final class TransportHomeComponent: Component<TransportHomeDependency>, TransportHomeInteractorDependency {
+final class TransportHomeComponent: Component<TransportHomeDependency>, TransportHomeInteractorDependency, TopupDependency {
     var topupBaseViewController: ViewControllable
     
     var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }
@@ -45,9 +45,12 @@ final class TransportHomeBuilder: Builder<TransportHomeDependency>, TransportHom
         let interactor = TransportHomeInteractor(presenter: viewController, dependency: component)
         interactor.listener = listener
         
+        let topup = TopupBuilder(dependency: component)
+        
         return TransportHomeRouter(
             interactor: interactor,
-            viewController: viewController
+            viewController: viewController,
+            topup: topup
         )
     }
 }
