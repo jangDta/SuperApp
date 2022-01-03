@@ -6,6 +6,7 @@
 //
 
 import ModernRIBs
+import AddPaymentMethod
 
 protocol TopupInteractable: Interactable, AddPaymentMethodListener, EnterAmountListener, CardOnFileListener {
     var router: TopupRouting? { get set }
