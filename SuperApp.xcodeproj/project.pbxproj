@@ -138,6 +138,11 @@
 		1340D08D2779AB1C000104B0 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		1340D08F2779AFBA000104B0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		1340D0912779AFD3000104B0 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		13DBBA402782E616002A21BB /* CX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CX; sourceTree = "<group>"; };
+		13DBBA412782E625002A21BB /* Finance */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Finance; sourceTree = "<group>"; };
+		13DBBA422782E632002A21BB /* Transport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transport; sourceTree = "<group>"; };
+		13DBBA432782E675002A21BB /* Profile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Profile; sourceTree = "<group>"; };
+		13DBBA442782E693002A21BB /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
 		157D6AE52778954500B07355 /* AddPaymentMethodRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodRouter.swift; sourceTree = "<group>"; };
 		157D6AE62778954500B07355 /* AddPaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodViewController.swift; sourceTree = "<group>"; };
 		157D6AE72778954500B07355 /* AddPaymentMethodBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodBuilder.swift; sourceTree = "<group>"; };
@@ -172,6 +177,11 @@
 		1340CFEF2772E01C000104B0 = {
 			isa = PBXGroup;
 			children = (
+				13DBBA442782E693002A21BB /* Platform */,
+				13DBBA432782E675002A21BB /* Profile */,
+				13DBBA422782E632002A21BB /* Transport */,
+				13DBBA412782E625002A21BB /* Finance */,
+				13DBBA402782E616002A21BB /* CX */,
 				1340CFFA2772E01C000104B0 /* SuperApp */,
 				1340CFF92772E01C000104B0 /* Products */,
 			);
