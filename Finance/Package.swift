@@ -22,7 +22,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "ModernRIBs", url: "https://github.com/DevYeom/ModernRIBs", .exact("1.0.1"))
+        .package(name: "ModernRIBs", url: "https://github.com/DevYeom/ModernRIBs", .exact("1.0.1")),
+        .package(path: "../Platform")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -33,7 +34,9 @@ let package = Package(
             name: "AddPaymentMethod",
             dependencies: [
                 "ModernRIBs",
-                "FinanceEntity"
+                "FinanceEntity",
+                "FinanceRepository",
+                .product(name: "RIBsUtil", package: "Platform")
             ]
         ),
         .target(
@@ -43,7 +46,8 @@ let package = Package(
         .target(
             name: "FinanceRepository",
             dependencies: [
-                "FinanceEntity"
+                "FinanceEntity",
+                .product(name: "CombineUtil", package: "Platform")
             ]
         ),
     ]

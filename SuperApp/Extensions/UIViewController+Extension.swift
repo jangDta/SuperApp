@@ -7,20 +7,6 @@
 
 import UIKit
 
-enum DismissButtonType {
-    case back
-    case close
-    
-    var iconSystemName: String {
-        switch self {
-            case .back:
-                return "chevron.backward"
-            case .close:
-                return "xmark"
-        }
-    }
-}
-
 extension UIViewController {
     
     func setNavigtaionItem(type: DismissButtonType, target: Any?, action: Selector?) {

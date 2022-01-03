@@ -34,7 +34,6 @@
 		1340D0462774054A000104B0 /* SuperPayDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D0422774054A000104B0 /* SuperPayDashboardInteractor.swift */; };
 		1340D04927744985000104B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04827744985000104B0 /* UIView+Extension.swift */; };
 		1340D04C27744BAA000104B0 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 1340D04B27744BAA000104B0 /* CombineExt */; };
-		1340D04E27744BC8000104B0 /* Combine+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04D27744BC8000104B0 /* Combine+Extension.swift */; };
 		1340D050277466F9000104B0 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D04F277466F9000104B0 /* Formatter.swift */; };
 		1340D05627754E09000104B0 /* CardOnFileDashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D05227754E09000104B0 /* CardOnFileDashboardRouter.swift */; };
 		1340D05727754E09000104B0 /* CardOnFileDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D05327754E09000104B0 /* CardOnFileDashboardViewController.swift */; };
@@ -104,7 +103,6 @@
 		1340D0412774054A000104B0 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
 		1340D0422774054A000104B0 /* SuperPayDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardInteractor.swift; sourceTree = "<group>"; };
 		1340D04827744985000104B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		1340D04D27744BC8000104B0 /* Combine+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Extension.swift"; sourceTree = "<group>"; };
 		1340D04F277466F9000104B0 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		1340D05227754E09000104B0 /* CardOnFileDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileDashboardRouter.swift; sourceTree = "<group>"; };
 		1340D05327754E09000104B0 /* CardOnFileDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOnFileDashboardViewController.swift; sourceTree = "<group>"; };
@@ -296,7 +294,6 @@
 			children = (
 				1340D04827744985000104B0 /* UIView+Extension.swift */,
 				1340D06727755FBE000104B0 /* UIColor+Extension.swift */,
-				1340D04D27744BC8000104B0 /* Combine+Extension.swift */,
 				1340D07F277980BE000104B0 /* UIViewController+Extension.swift */,
 				1340D08D2779AB1C000104B0 /* Array+Extension.swift */,
 				1340D08F2779AFBA000104B0 /* UITableView+Extension.swift */,
@@ -535,7 +532,6 @@
 				1340D0192772E994000104B0 /* AppRootRouter.swift in Sources */,
 				1340D0902779AFBA000104B0 /* UITableView+Extension.swift in Sources */,
 				1340D05927754E09000104B0 /* CardOnFileDashboardInteractor.swift in Sources */,
-				1340D04E27744BC8000104B0 /* Combine+Extension.swift in Sources */,
 				1340D05F27755491000104B0 /* PaymentView.swift in Sources */,
 				1340D06E27795136000104B0 /* TopupBuilder.swift in Sources */,
 				1340D07927797BFF000104B0 /* EnterAmountInteractor.swift in Sources */,

@@ -6,6 +6,9 @@
 //
 
 import ModernRIBs
+import FinanceRepository
+import RIBsUtil
+
 
 public protocol AddPaymentMethodDependency: Dependency {
     var cardOnFileRepository: CardOnFileRepository { get }

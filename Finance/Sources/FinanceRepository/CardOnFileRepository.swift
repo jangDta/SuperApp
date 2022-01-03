@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import FinanceEntity
+import CombineUtil
 
 public protocol CardOnFileRepository {
     var cardOnFile: ReadOnlyCurrentValuePublisher<[PaymentModel]> { get }
