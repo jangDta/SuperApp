@@ -21,7 +21,7 @@ final class AddPaymentMethodComponent: Component<AddPaymentMethodDependency>, Ad
 // MARK: - Builder
 
 public protocol AddPaymentMethodBuildable: Buildable {
-    func build(withListener listener: AddPaymentMethodListener, dismissButtonType: DismissButtonType) -> AddPaymentMethodRouting
+    func build(withListener listener: AddPaymentMethodListener, dismissButtonType: DismissButtonType) -> ViewableRouting
 }
 
 public final class AddPaymentMethodBuilder: Builder<AddPaymentMethodDependency>, AddPaymentMethodBuildable {
@@ -30,7 +30,7 @@ public final class AddPaymentMethodBuilder: Builder<AddPaymentMethodDependency>,
         super.init(dependency: dependency)
     }
 
-    public func build(withListener listener: AddPaymentMethodListener, dismissButtonType: DismissButtonType) -> AddPaymentMethodRouting {
+    public func build(withListener listener: AddPaymentMethodListener, dismissButtonType: DismissButtonType) -> ViewableRouting {
         let component = AddPaymentMethodComponent(dependency: dependency)
         let viewController = AddPaymentMethodViewController(dismissButtonType: dismissButtonType)
         let interactor = AddPaymentMethodInteractor(

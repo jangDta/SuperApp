@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import RIBsUtil
 
-extension UIViewController {
+public extension UIViewController {
     
     func setNavigtaionItem(type: DismissButtonType, target: Any?, action: Selector?) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(

@@ -16,6 +16,10 @@ let package = Package(
             name: "RIBsUtil",
             targets: ["RIBsUtil"]
         ),
+        .library(
+            name: "UIUtil",
+            targets: ["UIUtil"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -36,6 +40,12 @@ let package = Package(
             name: "RIBsUtil",
             dependencies: [
                 "ModernRIBs"
+            ]
+        ),
+        .target(
+            name: "UIUtil",
+            dependencies: [
+                "RIBsUtil"
             ]
         ),
     ]
