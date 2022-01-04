@@ -6,6 +6,7 @@
 //
 
 import ModernRIBs
+import FinanceEntity
 
 protocol CardOnFileDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
@@ -36,7 +37,7 @@ final class CardOnFileBuilder: Builder<CardOnFileDependency>, CardOnFileBuildabl
         withListener listener: CardOnFileListener,
         payments: [PaymentModel]
     ) -> CardOnFileRouting {
-        let component = CardOnFileComponent(dependency: dependency)
+        let _ = CardOnFileComponent(dependency: dependency)
         let viewController = CardOnFileViewController()
         let interactor = CardOnFileInteractor(
             presenter: viewController,

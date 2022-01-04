@@ -7,6 +7,7 @@
 
 import ModernRIBs
 import Foundation
+import CombineUtil
 
 protocol SuperPayDashboardDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be

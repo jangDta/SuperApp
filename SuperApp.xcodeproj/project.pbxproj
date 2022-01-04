@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131A40872784175500832C2A /* FinanceEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 131A40862784175500832C2A /* FinanceEntity */; };
+		131A40892784175500832C2A /* FinanceRepository in Frameworks */ = {isa = PBXBuildFile; productRef = 131A40882784175500832C2A /* FinanceRepository */; };
+		131A408B2784175500832C2A /* CombineUtil in Frameworks */ = {isa = PBXBuildFile; productRef = 131A408A2784175500832C2A /* CombineUtil */; };
+		131A408D2784175500832C2A /* RIBsUtil in Frameworks */ = {isa = PBXBuildFile; productRef = 131A408C2784175500832C2A /* RIBsUtil */; };
+		131A408F2784175500832C2A /* UIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = 131A408E2784175500832C2A /* UIUtil */; };
 		1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340CFFB2772E01C000104B0 /* AppDelegate.swift */; };
 		1340D0052772E01E000104B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0042772E01E000104B0 /* Assets.xcassets */; };
 		1340D0082772E01E000104B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0062772E01E000104B0 /* LaunchScreen.storyboard */; };
@@ -143,7 +148,12 @@
 			files = (
 				1340D04C27744BAA000104B0 /* CombineExt in Frameworks */,
 				13C97C112782EFFA0064CFA1 /* AddPaymentMethod in Frameworks */,
+				131A408F2784175500832C2A /* UIUtil in Frameworks */,
+				131A408B2784175500832C2A /* CombineUtil in Frameworks */,
+				131A40872784175500832C2A /* FinanceEntity in Frameworks */,
 				1340D0112772E4C0000104B0 /* ModernRIBs in Frameworks */,
+				131A408D2784175500832C2A /* RIBsUtil in Frameworks */,
+				131A40892784175500832C2A /* FinanceRepository in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +434,11 @@
 				1340D0102772E4C0000104B0 /* ModernRIBs */,
 				1340D04B27744BAA000104B0 /* CombineExt */,
 				13C97C102782EFFA0064CFA1 /* AddPaymentMethod */,
+				131A40862784175500832C2A /* FinanceEntity */,
+				131A40882784175500832C2A /* FinanceRepository */,
+				131A408A2784175500832C2A /* CombineUtil */,
+				131A408C2784175500832C2A /* RIBsUtil */,
+				131A408E2784175500832C2A /* UIUtil */,
 			);
 			productName = SuperApp;
 			productReference = 1340CFF82772E01C000104B0 /* SuperApp.app */;
@@ -772,6 +787,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		131A40862784175500832C2A /* FinanceEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FinanceEntity;
+		};
+		131A40882784175500832C2A /* FinanceRepository */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FinanceRepository;
+		};
+		131A408A2784175500832C2A /* CombineUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CombineUtil;
+		};
+		131A408C2784175500832C2A /* RIBsUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RIBsUtil;
+		};
+		131A408E2784175500832C2A /* UIUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIUtil;
+		};
 		1340D0102772E4C0000104B0 /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1340D00F2772E4C0000104B0 /* XCRemoteSwiftPackageReference "ModernRIBs" */;

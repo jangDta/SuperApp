@@ -26,6 +26,8 @@ public final class CardOnFileRepositoryImpl: CardOnFileRepository {
         PaymentModel(id: "2", name: "우리은행", digits: "1357", color: "#78c5f5ff", isPrimary: false),
     ])
     
+    public init() {}
+    
     public func addCard(_ info: AddPaymentMethodInfo) -> AnyPublisher<PaymentModel, Error> {
         let model = PaymentModel(id: "", name: "새 카드", digits: String(info.number.suffix(4)), color: "", isPrimary: false)
         

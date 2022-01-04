@@ -6,6 +6,7 @@
 //
 
 import ModernRIBs
+import FinanceEntity
 
 protocol CardOnFileRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
