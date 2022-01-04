@@ -8,10 +8,10 @@
 import UIKit
 import ModernRIBs
 
-final class NavigationControllable: ViewControllable {
+public final class NavigationControllable: ViewControllable {
   
-  var uiviewController: UIViewController { self.navigationController }
-  let navigationController: UINavigationController
+  public var uiviewController: UIViewController { self.navigationController }
+  public let navigationController: UINavigationController
   
   public init(root: ViewControllable) {
     let navigation = UINavigationController(rootViewController: root.uiviewController)
@@ -23,7 +23,7 @@ final class NavigationControllable: ViewControllable {
   }
 }
 
-extension ViewControllable {
+public extension ViewControllable {
   
   func present(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)?) {
     self.uiviewController.present(viewControllable.uiviewController, animated: animated, completion: completion)

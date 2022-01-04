@@ -23,8 +23,7 @@ protocol TopupRouting: Routing {
     func popToRoot()
 }
 
-protocol TopupListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+public protocol TopupListener: AnyObject {
     func topupDidClose()
     func topupDidFinish()
 }
@@ -38,9 +37,6 @@ final class TopupInteractor: Interactor, TopupInteractable, AdaptivePresentation
 
     weak var router: TopupRouting?
     weak var listener: TopupListener?
-
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
     
     private let dependency: TopupInteractorDependency
     let presentationDelegateProxy: AdaptivePresentationControllerDelegateProxy
@@ -77,7 +73,6 @@ final class TopupInteractor: Interactor, TopupInteractable, AdaptivePresentation
         super.willResignActive()
 
         router?.cleanupViews()
-        // TODO: Pause any business logic.
     }
     
     // MARK: - AddPaymentMethod Listener
