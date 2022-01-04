@@ -6,6 +6,8 @@
 //
 
 import ModernRIBs
+import CombineUtil
+import FinanceEntity
 
 protocol EnterAmountDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be

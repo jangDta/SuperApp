@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FinanceEntity
 
 struct PaymentViewModel {
     let name: String
