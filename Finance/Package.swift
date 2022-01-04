@@ -24,6 +24,10 @@ let package = Package(
             name: "Topup",
             targets: ["Topup"]
         ),
+        .library(
+            name: "FinanceHome",
+            targets: ["FinanceHome"]
+        ),
     ],
     dependencies: [
         .package(name: "ModernRIBs", url: "https://github.com/DevYeom/ModernRIBs", .exact("1.0.1")),
@@ -52,6 +56,19 @@ let package = Package(
                 "FinanceEntity",
                 "FinanceRepository",
                 "AddPaymentMethod",
+                .product(name: "RIBsUtil", package: "Platform"),
+                .product(name: "UIUtil", package: "Platform"),
+                .product(name: "FoundationUtil", package: "Platform")
+            ]
+        ),
+        .target(
+            name: "FinanceHome",
+            dependencies: [
+                "ModernRIBs",
+                "FinanceEntity",
+                "FinanceRepository",
+                "AddPaymentMethod",
+                "Topup",
                 .product(name: "RIBsUtil", package: "Platform"),
                 .product(name: "UIUtil", package: "Platform"),
                 .product(name: "FoundationUtil", package: "Platform")

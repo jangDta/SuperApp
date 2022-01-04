@@ -8,6 +8,7 @@
 import ModernRIBs
 import UIKit
 import RIBsUtil
+import FinanceHome
 
 protocol AppRootInteractable: Interactable, AppHomeListener, FinanceHomeListener, ProfileHomeListener {
     var router: AppRootRouting? { get set }

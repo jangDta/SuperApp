@@ -7,6 +7,8 @@
 
 import ModernRIBs
 import FinanceRepository
+import FinanceHome
+import FoundationUtil
 
 protocol AppRootDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but won't be
