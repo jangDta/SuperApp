@@ -14,7 +14,7 @@ final class TransportHomeViewController: UIViewController, TransportHomePresenta
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "map_seoul")
+        imageView.image = UIImage(named: "map_seoul", in: .module, with: nil)
         return imageView
     }()
     

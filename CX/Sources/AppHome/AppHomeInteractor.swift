@@ -19,7 +19,7 @@ protocol AppHomePresentable: Presentable {
     func updateWidget(_ viewModels: [HomeWidgetViewModel])
 }
 
-protocol AppHomeListener: AnyObject {
+public protocol AppHomeListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
