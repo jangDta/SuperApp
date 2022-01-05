@@ -10,6 +10,7 @@ import FinanceRepository
 import FinanceHome
 import FoundationUtil
 import AppHome
+import ProfileHome
 
 protocol AppRootDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but won't be

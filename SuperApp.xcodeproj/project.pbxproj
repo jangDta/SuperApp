@@ -17,6 +17,7 @@
 		132DF60B278440EC005CBC96 /* FinanceHome in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF60A278440EC005CBC96 /* FinanceHome */; };
 		132DF60D27852949005CBC96 /* TransportHome in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF60C27852949005CBC96 /* TransportHome */; };
 		132DF60F27852B8D005CBC96 /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF60E27852B8D005CBC96 /* AppHome */; };
+		132DF61127853517005CBC96 /* ProfileHome in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61027853517005CBC96 /* ProfileHome */; };
 		1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340CFFB2772E01C000104B0 /* AppDelegate.swift */; };
 		1340D0052772E01E000104B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0042772E01E000104B0 /* Assets.xcassets */; };
 		1340D0082772E01E000104B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0062772E01E000104B0 /* LaunchScreen.storyboard */; };
@@ -28,10 +29,6 @@
 		1340D01D2772EC1C000104B0 /* AppRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340D01C2772EC1C000104B0 /* AppRootTabBarController.swift */; };
 		1340D04C27744BAA000104B0 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 1340D04B27744BAA000104B0 /* CombineExt */; };
 		13C97C112782EFFA0064CFA1 /* AddPaymentMethod in Frameworks */ = {isa = PBXBuildFile; productRef = 13C97C102782EFFA0064CFA1 /* AddPaymentMethod */; };
-		157D6AFE277EBC5F00B07355 /* ProfileHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF2277EBC5F00B07355 /* ProfileHomeRouter.swift */; };
-		157D6AFF277EBC5F00B07355 /* ProfileHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF3277EBC5F00B07355 /* ProfileHomeBuilder.swift */; };
-		157D6B00277EBC5F00B07355 /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF4277EBC5F00B07355 /* ProfileHomeViewController.swift */; };
-		157D6B01277EBC5F00B07355 /* ProfileHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF5277EBC5F00B07355 /* ProfileHomeInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +47,6 @@
 		13DBBA422782E632002A21BB /* Transport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transport; sourceTree = "<group>"; };
 		13DBBA432782E675002A21BB /* Profile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Profile; sourceTree = "<group>"; };
 		13DBBA442782E693002A21BB /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
-		157D6AF2277EBC5F00B07355 /* ProfileHomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeRouter.swift; sourceTree = "<group>"; };
-		157D6AF3277EBC5F00B07355 /* ProfileHomeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeBuilder.swift; sourceTree = "<group>"; };
-		157D6AF4277EBC5F00B07355 /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
-		157D6AF5277EBC5F00B07355 /* ProfileHomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +61,7 @@
 				131A409127842DAB00832C2A /* Topup in Frameworks */,
 				131A408B2784175500832C2A /* CombineUtil in Frameworks */,
 				131A40872784175500832C2A /* FinanceEntity in Frameworks */,
+				132DF61127853517005CBC96 /* ProfileHome in Frameworks */,
 				132DF60F27852B8D005CBC96 /* AppHome in Frameworks */,
 				132DF60D27852949005CBC96 /* TransportHome in Frameworks */,
 				132DF60B278440EC005CBC96 /* FinanceHome in Frameworks */,
@@ -107,7 +101,6 @@
 			children = (
 				1340D0122772E8CA000104B0 /* AppDelegate */,
 				1340D0152772E96A000104B0 /* AppRoot */,
-				157D6AF1277EBC5F00B07355 /* ProfileHome */,
 				1340D0042772E01E000104B0 /* Assets.xcassets */,
 				1340D0062772E01E000104B0 /* LaunchScreen.storyboard */,
 				1340D0092772E01E000104B0 /* Info.plist */,
@@ -142,17 +135,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		157D6AF1277EBC5F00B07355 /* ProfileHome */ = {
-			isa = PBXGroup;
-			children = (
-				157D6AF2277EBC5F00B07355 /* ProfileHomeRouter.swift */,
-				157D6AF3277EBC5F00B07355 /* ProfileHomeBuilder.swift */,
-				157D6AF4277EBC5F00B07355 /* ProfileHomeViewController.swift */,
-				157D6AF5277EBC5F00B07355 /* ProfileHomeInteractor.swift */,
-			);
-			path = ProfileHome;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +165,7 @@
 				132DF60A278440EC005CBC96 /* FinanceHome */,
 				132DF60C27852949005CBC96 /* TransportHome */,
 				132DF60E27852B8D005CBC96 /* AppHome */,
+				132DF61027853517005CBC96 /* ProfileHome */,
 			);
 			productName = SuperApp;
 			productReference = 1340CFF82772E01C000104B0 /* SuperApp.app */;
@@ -242,16 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				157D6AFF277EBC5F00B07355 /* ProfileHomeBuilder.swift in Sources */,
-				157D6AFE277EBC5F00B07355 /* ProfileHomeRouter.swift in Sources */,
 				1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */,
 				1340D0142772E905000104B0 /* AppComponent.swift in Sources */,
 				1340D0192772E994000104B0 /* AppRootRouter.swift in Sources */,
 				1340D01A2772E994000104B0 /* AppRootBuilder.swift in Sources */,
-				157D6B01277EBC5F00B07355 /* ProfileHomeInteractor.swift in Sources */,
 				1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */,
 				1340D01D2772EC1C000104B0 /* AppRootTabBarController.swift in Sources */,
-				157D6B00277EBC5F00B07355 /* ProfileHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +504,10 @@
 		132DF60E27852B8D005CBC96 /* AppHome */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppHome;
+		};
+		132DF61027853517005CBC96 /* ProfileHome */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ProfileHome;
 		};
 		1340D0102772E4C0000104B0 /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;
