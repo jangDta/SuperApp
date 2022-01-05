@@ -25,6 +25,9 @@
 		132DF61C2785551A005CBC96 /* DefaultsStore in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61B2785551A005CBC96 /* DefaultsStore */; };
 		132DF61E2785551A005CBC96 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61D2785551A005CBC96 /* Network */; };
 		132DF6202785551A005CBC96 /* NetworkImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61F2785551A005CBC96 /* NetworkImp */; };
+		132DF62427855C70005CBC96 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132DF62327855C70005CBC96 /* BaseURL.swift */; };
+		132DF62627855DDF005CBC96 /* SuperAppURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132DF62527855DDF005CBC96 /* SuperAppURLProtocol.swift */; };
+		132DF62827858C67005CBC96 /* SetupURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132DF62727858C67005CBC96 /* SetupURLProtocol.swift */; };
 		1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340CFFB2772E01C000104B0 /* AppDelegate.swift */; };
 		1340D0052772E01E000104B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0042772E01E000104B0 /* Assets.xcassets */; };
 		1340D0082772E01E000104B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0062772E01E000104B0 /* LaunchScreen.storyboard */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		132DF61527853D22005CBC96 /* AppRootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootComponent.swift; sourceTree = "<group>"; };
+		132DF62327855C70005CBC96 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		132DF62527855DDF005CBC96 /* SuperAppURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperAppURLProtocol.swift; sourceTree = "<group>"; };
+		132DF62727858C67005CBC96 /* SetupURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupURLProtocol.swift; sourceTree = "<group>"; };
 		1340CFF82772E01C000104B0 /* SuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1340CFFB2772E01C000104B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1340D0042772E01E000104B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 				1340D0182772E994000104B0 /* AppRootInteractor.swift */,
 				1340D01C2772EC1C000104B0 /* AppRootTabBarController.swift */,
 				132DF61527853D22005CBC96 /* AppRootComponent.swift */,
+				132DF62327855C70005CBC96 /* BaseURL.swift */,
+				132DF62527855DDF005CBC96 /* SuperAppURLProtocol.swift */,
+				132DF62727858C67005CBC96 /* SetupURLProtocol.swift */,
 			);
 			path = AppRoot;
 			sourceTree = "<group>";
@@ -251,9 +260,12 @@
 				1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */,
 				1340D0142772E905000104B0 /* AppComponent.swift in Sources */,
 				1340D0192772E994000104B0 /* AppRootRouter.swift in Sources */,
+				132DF62627855DDF005CBC96 /* SuperAppURLProtocol.swift in Sources */,
 				1340D01A2772E994000104B0 /* AppRootBuilder.swift in Sources */,
+				132DF62827858C67005CBC96 /* SetupURLProtocol.swift in Sources */,
 				1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */,
 				132DF61627853D22005CBC96 /* AppRootComponent.swift in Sources */,
+				132DF62427855C70005CBC96 /* BaseURL.swift in Sources */,
 				1340D01D2772EC1C000104B0 /* AppRootTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

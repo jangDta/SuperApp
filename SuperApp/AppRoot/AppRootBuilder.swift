@@ -34,8 +34,6 @@ final class AppRootBuilder: Builder<AppRootDependency>, AppRootBuildable {
         
         let component = AppRootComponent(
             dependency: dependency,
-            cardOnFileRepository: CardOnFileRepositoryImpl(),
-            superPayRepository: SuperPayRepositoryImpl(),
             rootViewController: tabBarController
         )
         
