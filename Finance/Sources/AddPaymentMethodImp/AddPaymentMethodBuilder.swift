@@ -8,6 +8,7 @@
 import ModernRIBs
 import FinanceRepository
 import RIBsUtil
+import AddPaymentMethod
 
 
 public protocol AddPaymentMethodDependency: Dependency {
@@ -19,10 +20,6 @@ final class AddPaymentMethodComponent: Component<AddPaymentMethodDependency>, Ad
 }
 
 // MARK: - Builder
-
-public protocol AddPaymentMethodBuildable: Buildable {
-    func build(withListener listener: AddPaymentMethodListener, dismissButtonType: DismissButtonType) -> ViewableRouting
-}
 
 public final class AddPaymentMethodBuilder: Builder<AddPaymentMethodDependency>, AddPaymentMethodBuildable {
 

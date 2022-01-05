@@ -17,22 +17,6 @@ protocol AppRootDependency: Dependency {
     // created by this RIB.
 }
 
-final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, FinanceHomeDependency, ProfileHomeDependency {
-    var cardOnFileRepository: CardOnFileRepository
-    
-    var superPayRepository: SuperPayRepository
-    
-    init(
-        dependency: AppRootDependency,
-        cardOnFileRepository: CardOnFileRepository,
-        superPayRepository: SuperPayRepository
-    ) {
-        self.cardOnFileRepository = cardOnFileRepository
-        self.superPayRepository = superPayRepository
-        super.init(dependency: dependency)
-    }
-}
-
 // MARK: - Builder
 
 protocol AppRootBuildable: Buildable {
@@ -46,13 +30,14 @@ final class AppRootBuilder: Builder<AppRootDependency>, AppRootBuildable {
     }
 
     func build() -> (launchRouter: LaunchRouting, urlHandler: URLHandler) {
+        let tabBarController = AppRootTabBarController()
+        
         let component = AppRootComponent(
             dependency: dependency,
             cardOnFileRepository: CardOnFileRepositoryImpl(),
-            superPayRepository: SuperPayRepositoryImpl()
+            superPayRepository: SuperPayRepositoryImpl(),
+            rootViewController: tabBarController
         )
-        
-        let tabBarController = AppRootTabBarController()
         
         let interactor = AppRootInteractor(presenter: tabBarController)
         

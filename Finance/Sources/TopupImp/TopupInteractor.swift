@@ -11,6 +11,7 @@ import FinanceEntity
 import FinanceRepository
 import CombineUtil
 import UIUtil
+import Topup
 
 protocol TopupRouting: Routing {
     func cleanupViews()
@@ -21,11 +22,6 @@ protocol TopupRouting: Routing {
     func attachCardOnFile(payments: [PaymentModel])
     func detachCardOnFile()
     func popToRoot()
-}
-
-public protocol TopupListener: AnyObject {
-    func topupDidClose()
-    func topupDidFinish()
 }
 
 protocol TopupInteractorDependency {

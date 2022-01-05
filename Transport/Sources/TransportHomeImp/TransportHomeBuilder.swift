@@ -4,14 +4,17 @@ import FinanceRepository
 import CombineUtil
 import FoundationUtil
 import Topup
+import TransportHome
 
 public protocol TransportHomeDependency: Dependency {
     var cardOnFileRepository: CardOnFileRepository { get }
     
     var superPayRepository: SuperPayRepository { get }
+    
+    var topupBuildable: TopupBuildable { get }
 }
 
-final class TransportHomeComponent: Component<TransportHomeDependency>, TransportHomeInteractorDependency, TopupDependency {
+final class TransportHomeComponent: Component<TransportHomeDependency>, TransportHomeInteractorDependency {
     var topupBaseViewController: ViewControllable
     
     var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }
@@ -21,6 +24,8 @@ final class TransportHomeComponent: Component<TransportHomeDependency>, Transpor
     var superPayBalance: ReadOnlyCurrentValuePublisher<Double> { superPayRepository.balance }
     
     var balanceFormatter: NumberFormatter { Formatter.balanceFormatter }
+    
+    var topupBuildable: TopupBuildable { dependency.topupBuildable }
     
     init(
         topupBaseViewController: ViewControllable,
@@ -32,10 +37,6 @@ final class TransportHomeComponent: Component<TransportHomeDependency>, Transpor
 }
 
 // MARK: - Builder
-
-public protocol TransportHomeBuildable: Buildable {
-    func build(withListener listener: TransportHomeListener) -> ViewableRouting
-}
 
 public final class TransportHomeBuilder: Builder<TransportHomeDependency>, TransportHomeBuildable {
     
@@ -49,12 +50,10 @@ public final class TransportHomeBuilder: Builder<TransportHomeDependency>, Trans
         let interactor = TransportHomeInteractor(presenter: viewController, dependency: component)
         interactor.listener = listener
         
-        let topup = TopupBuilder(dependency: component)
-        
         return TransportHomeRouter(
             interactor: interactor,
             viewController: viewController,
-            topup: topup
+            topup: component.topupBuildable
         )
     }
 }

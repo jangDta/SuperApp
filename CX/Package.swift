@@ -25,6 +25,7 @@ let package = Package(
                 "ModernRIBs",
                 .product(name: "TransportHome", package: "Transport"),
                 .product(name: "FinanceRepository", package: "Finance"),
+                .product(name: "UIUtil", package: "Platform")
             ]
         ),
     ]
