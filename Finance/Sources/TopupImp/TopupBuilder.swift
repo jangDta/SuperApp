@@ -10,6 +10,7 @@ import FinanceRepository
 import FinanceEntity
 import AddPaymentMethod
 import CombineUtil
+import Topup
 
 public protocol TopupDependency: Dependency {
     // Topup RIB을 띄운 RIB에서 지정해줄 ViewControllable
@@ -39,10 +40,6 @@ final class TopupComponent: Component<TopupDependency>, TopupInteractorDependenc
 }
 
 // MARK: - Builder
-
-public protocol TopupBuildable: Buildable {
-    func build(withListener listener: TopupListener) -> Routing
-}
 
 public final class TopupBuilder: Builder<TopupDependency>, TopupBuildable {
 

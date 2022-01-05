@@ -15,9 +15,11 @@ public protocol FinanceHomeDependency: Dependency {
     var superPayRepository: SuperPayRepository { get }
     
     var cardOnFileRepository: CardOnFileRepository { get }
+    
+    var topupBuildable: TopupBuildable { get }
 }
 
-final class FinanceHomeComponent: Component<FinanceHomeDependency>, SuperPayDashboardDependency, CardOnFileDashboardDependency, AddPaymentMethodDependency, TopupDependency {
+final class FinanceHomeComponent: Component<FinanceHomeDependency>, SuperPayDashboardDependency, CardOnFileDashboardDependency, AddPaymentMethodDependency {
     
     var balance: ReadOnlyCurrentValuePublisher<Double> { superPayRepository.balance }
     var superPayRepository: SuperPayRepository { dependency.superPayRepository }
@@ -25,6 +27,8 @@ final class FinanceHomeComponent: Component<FinanceHomeDependency>, SuperPayDash
     var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }
     
     var topupBaseViewController: ViewControllable
+    
+    var topupBuildable: TopupBuildable { dependency.topupBuildable }
     
     init(
         dependency: FinanceHomeDependency,
@@ -59,7 +63,6 @@ public final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHo
         let superPayDashboard = SuperPayDashboardBuilder(dependency: component)
         let cardOnFileDasahboard = CardOnFileDashboardBuilder(dependency: component)
         let addPaymentMethod = AddPaymentMethodBuilder(dependency: component)
-        let topup = TopupBuilder(dependency: component)
         
         return FinanceHomeRouter(
             interactor: interactor,
@@ -67,7 +70,7 @@ public final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHo
             superPayDashboard: superPayDashboard,
             cardOnFileDashboard: cardOnFileDasahboard,
             addPaymentMethod: addPaymentMethod,
-            topup: topup
+            topup: component.topupBuildable
         )
     }
 }

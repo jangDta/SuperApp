@@ -20,6 +20,7 @@
 		132DF61127853517005CBC96 /* ProfileHome in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61027853517005CBC96 /* ProfileHome */; };
 		132DF61427853B81005CBC96 /* TransportHomeImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61327853B81005CBC96 /* TransportHomeImp */; };
 		132DF61627853D22005CBC96 /* AppRootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132DF61527853D22005CBC96 /* AppRootComponent.swift */; };
+		132DF618278547FA005CBC96 /* TopupImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF617278547FA005CBC96 /* TopupImp */; };
 		1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340CFFB2772E01C000104B0 /* AppDelegate.swift */; };
 		1340D0052772E01E000104B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0042772E01E000104B0 /* Assets.xcassets */; };
 		1340D0082772E01E000104B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0062772E01E000104B0 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 				13C97C112782EFFA0064CFA1 /* AddPaymentMethod in Frameworks */,
 				131A408F2784175500832C2A /* UIUtil in Frameworks */,
 				131A409127842DAB00832C2A /* Topup in Frameworks */,
+				132DF618278547FA005CBC96 /* TopupImp in Frameworks */,
 				131A408B2784175500832C2A /* CombineUtil in Frameworks */,
 				131A40872784175500832C2A /* FinanceEntity in Frameworks */,
 				132DF61127853517005CBC96 /* ProfileHome in Frameworks */,
@@ -172,6 +174,7 @@
 				132DF60E27852B8D005CBC96 /* AppHome */,
 				132DF61027853517005CBC96 /* ProfileHome */,
 				132DF61327853B81005CBC96 /* TransportHomeImp */,
+				132DF617278547FA005CBC96 /* TopupImp */,
 			);
 			productName = SuperApp;
 			productReference = 1340CFF82772E01C000104B0 /* SuperApp.app */;
@@ -519,6 +522,10 @@
 		132DF61327853B81005CBC96 /* TransportHomeImp */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TransportHomeImp;
+		};
+		132DF617278547FA005CBC96 /* TopupImp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TopupImp;
 		};
 		1340D0102772E4C0000104B0 /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;
