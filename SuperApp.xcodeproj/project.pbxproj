@@ -22,6 +22,9 @@
 		132DF61627853D22005CBC96 /* AppRootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132DF61527853D22005CBC96 /* AppRootComponent.swift */; };
 		132DF618278547FA005CBC96 /* TopupImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF617278547FA005CBC96 /* TopupImp */; };
 		132DF61A27854F2F005CBC96 /* AddPaymentMethodImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61927854F2F005CBC96 /* AddPaymentMethodImp */; };
+		132DF61C2785551A005CBC96 /* DefaultsStore in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61B2785551A005CBC96 /* DefaultsStore */; };
+		132DF61E2785551A005CBC96 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61D2785551A005CBC96 /* Network */; };
+		132DF6202785551A005CBC96 /* NetworkImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61F2785551A005CBC96 /* NetworkImp */; };
 		1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340CFFB2772E01C000104B0 /* AppDelegate.swift */; };
 		1340D0052772E01E000104B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0042772E01E000104B0 /* Assets.xcassets */; };
 		1340D0082772E01E000104B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0062772E01E000104B0 /* LaunchScreen.storyboard */; };
@@ -61,9 +64,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				132DF61427853B81005CBC96 /* TransportHomeImp in Frameworks */,
+				132DF61E2785551A005CBC96 /* Network in Frameworks */,
 				132DF61A27854F2F005CBC96 /* AddPaymentMethodImp in Frameworks */,
 				1340D04C27744BAA000104B0 /* CombineExt in Frameworks */,
 				131A40952784327500832C2A /* FoundationUtil in Frameworks */,
+				132DF61C2785551A005CBC96 /* DefaultsStore in Frameworks */,
 				13C97C112782EFFA0064CFA1 /* AddPaymentMethod in Frameworks */,
 				131A408F2784175500832C2A /* UIUtil in Frameworks */,
 				131A409127842DAB00832C2A /* Topup in Frameworks */,
@@ -76,6 +81,7 @@
 				132DF60B278440EC005CBC96 /* FinanceHome in Frameworks */,
 				1340D0112772E4C0000104B0 /* ModernRIBs in Frameworks */,
 				131A408D2784175500832C2A /* RIBsUtil in Frameworks */,
+				132DF6202785551A005CBC96 /* NetworkImp in Frameworks */,
 				131A40892784175500832C2A /* FinanceRepository in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +186,9 @@
 				132DF61327853B81005CBC96 /* TransportHomeImp */,
 				132DF617278547FA005CBC96 /* TopupImp */,
 				132DF61927854F2F005CBC96 /* AddPaymentMethodImp */,
+				132DF61B2785551A005CBC96 /* DefaultsStore */,
+				132DF61D2785551A005CBC96 /* Network */,
+				132DF61F2785551A005CBC96 /* NetworkImp */,
 			);
 			productName = SuperApp;
 			productReference = 1340CFF82772E01C000104B0 /* SuperApp.app */;
@@ -535,6 +544,18 @@
 		132DF61927854F2F005CBC96 /* AddPaymentMethodImp */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AddPaymentMethodImp;
+		};
+		132DF61B2785551A005CBC96 /* DefaultsStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DefaultsStore;
+		};
+		132DF61D2785551A005CBC96 /* Network */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Network;
+		};
+		132DF61F2785551A005CBC96 /* NetworkImp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkImp;
 		};
 		1340D0102772E4C0000104B0 /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;
