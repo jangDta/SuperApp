@@ -84,7 +84,6 @@
 				13DBBA402782E616002A21BB /* CX */,
 				1340CFFA2772E01C000104B0 /* SuperApp */,
 				1340CFF92772E01C000104B0 /* Products */,
-				13C97C0F2782EFFA0064CFA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,13 +125,6 @@
 				1340D01C2772EC1C000104B0 /* AppRootTabBarController.swift */,
 			);
 			path = AppRoot;
-			sourceTree = "<group>";
-		};
-		13C97C0F2782EFFA0064CFA1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
