@@ -7,6 +7,7 @@
 
 import UIKit
 import ModernRIBs
+import FoundationUtil
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FoundationUtil
 
 extension UITableViewCell: Reusable {}
 

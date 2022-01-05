@@ -13,6 +13,10 @@ let package = Package(
             targets: ["CombineUtil"]
         ),
         .library(
+            name: "FoundationUtil",
+            targets: ["FoundationUtil"]
+        ),
+        .library(
             name: "RIBsUtil",
             targets: ["RIBsUtil"]
         ),
@@ -37,6 +41,10 @@ let package = Package(
             ]
         ),
         .target(
+            name: "FoundationUtil",
+            dependencies: []
+        ),
+        .target(
             name: "RIBsUtil",
             dependencies: [
                 "ModernRIBs"
@@ -45,7 +53,8 @@ let package = Package(
         .target(
             name: "UIUtil",
             dependencies: [
-                "RIBsUtil"
+                "RIBsUtil",
+                "FoundationUtil"
             ]
         ),
     ]
