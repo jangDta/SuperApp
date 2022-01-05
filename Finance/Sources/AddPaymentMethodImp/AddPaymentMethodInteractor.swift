@@ -9,6 +9,7 @@ import ModernRIBs
 import Combine
 import FinanceEntity
 import FinanceRepository
+import AddPaymentMethod
 
 protocol AddPaymentMethodRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
@@ -17,12 +18,6 @@ protocol AddPaymentMethodRouting: ViewableRouting {
 protocol AddPaymentMethodPresentable: Presentable {
     var listener: AddPaymentMethodPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
-}
-
-public protocol AddPaymentMethodListener: AnyObject {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-    func addPaymentMethodDidTapClose()
-    func addPaymentMethodDidAddCard(_ model: PaymentModel)
 }
 
 protocol AddPaymentMethodInteractorDependency {

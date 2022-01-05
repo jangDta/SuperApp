@@ -21,6 +21,7 @@
 		132DF61427853B81005CBC96 /* TransportHomeImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61327853B81005CBC96 /* TransportHomeImp */; };
 		132DF61627853D22005CBC96 /* AppRootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132DF61527853D22005CBC96 /* AppRootComponent.swift */; };
 		132DF618278547FA005CBC96 /* TopupImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF617278547FA005CBC96 /* TopupImp */; };
+		132DF61A27854F2F005CBC96 /* AddPaymentMethodImp in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF61927854F2F005CBC96 /* AddPaymentMethodImp */; };
 		1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340CFFB2772E01C000104B0 /* AppDelegate.swift */; };
 		1340D0052772E01E000104B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0042772E01E000104B0 /* Assets.xcassets */; };
 		1340D0082772E01E000104B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0062772E01E000104B0 /* LaunchScreen.storyboard */; };
@@ -59,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				132DF61427853B81005CBC96 /* TransportHomeImp in Frameworks */,
+				132DF61A27854F2F005CBC96 /* AddPaymentMethodImp in Frameworks */,
 				1340D04C27744BAA000104B0 /* CombineExt in Frameworks */,
 				131A40952784327500832C2A /* FoundationUtil in Frameworks */,
 				13C97C112782EFFA0064CFA1 /* AddPaymentMethod in Frameworks */,
@@ -175,6 +177,7 @@
 				132DF61027853517005CBC96 /* ProfileHome */,
 				132DF61327853B81005CBC96 /* TransportHomeImp */,
 				132DF617278547FA005CBC96 /* TopupImp */,
+				132DF61927854F2F005CBC96 /* AddPaymentMethodImp */,
 			);
 			productName = SuperApp;
 			productReference = 1340CFF82772E01C000104B0 /* SuperApp.app */;
@@ -526,6 +529,10 @@
 		132DF617278547FA005CBC96 /* TopupImp */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TopupImp;
+		};
+		132DF61927854F2F005CBC96 /* AddPaymentMethodImp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AddPaymentMethodImp;
 		};
 		1340D0102772E4C0000104B0 /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;

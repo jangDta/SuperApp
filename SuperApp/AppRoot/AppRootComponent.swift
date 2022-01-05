@@ -15,8 +15,14 @@ import TransportHome
 import TransportHomeImp
 import Topup
 import TopupImp
+import AddPaymentMethod
+import AddPaymentMethodImp
 
-final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, FinanceHomeDependency, ProfileHomeDependency, TransportHomeDependency, TopupDependency {
+final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, FinanceHomeDependency, ProfileHomeDependency, TransportHomeDependency, TopupDependency, AddPaymentMethodDependency {
+    
+    lazy var addPaymentMethodBuildable: AddPaymentMethodBuildable = {
+        return AddPaymentMethodBuilder(dependency: self)
+    }()
     
     lazy var topupBuildable: TopupBuildable = {
         return TopupBuilder(dependency: self)
