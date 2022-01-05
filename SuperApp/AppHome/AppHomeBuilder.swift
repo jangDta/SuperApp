@@ -7,6 +7,7 @@
 
 import ModernRIBs
 import FinanceRepository
+import TransportHome
 
 protocol AppHomeDependency: Dependency {
     var cardOnFileRepository: CardOnFileRepository { get }

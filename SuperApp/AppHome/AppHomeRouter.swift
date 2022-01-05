@@ -6,6 +6,7 @@
 //
 
 import ModernRIBs
+import TransportHome
 
 protocol AppHomeInteractable: Interactable, TransportHomeListener {
     var router: AppHomeRouting? { get set }

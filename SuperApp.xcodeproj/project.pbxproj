@@ -15,6 +15,7 @@
 		131A409127842DAB00832C2A /* Topup in Frameworks */ = {isa = PBXBuildFile; productRef = 131A409027842DAB00832C2A /* Topup */; };
 		131A40952784327500832C2A /* FoundationUtil in Frameworks */ = {isa = PBXBuildFile; productRef = 131A40942784327500832C2A /* FoundationUtil */; };
 		132DF60B278440EC005CBC96 /* FinanceHome in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF60A278440EC005CBC96 /* FinanceHome */; };
+		132DF60D27852949005CBC96 /* TransportHome in Frameworks */ = {isa = PBXBuildFile; productRef = 132DF60C27852949005CBC96 /* TransportHome */; };
 		1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1340CFFB2772E01C000104B0 /* AppDelegate.swift */; };
 		1340D0052772E01E000104B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0042772E01E000104B0 /* Assets.xcassets */; };
 		1340D0082772E01E000104B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1340D0062772E01E000104B0 /* LaunchScreen.storyboard */; };
@@ -36,12 +37,6 @@
 		157D6AFF277EBC5F00B07355 /* ProfileHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF3277EBC5F00B07355 /* ProfileHomeBuilder.swift */; };
 		157D6B00277EBC5F00B07355 /* ProfileHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF4277EBC5F00B07355 /* ProfileHomeViewController.swift */; };
 		157D6B01277EBC5F00B07355 /* ProfileHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF5277EBC5F00B07355 /* ProfileHomeInteractor.swift */; };
-		157D6B02277EBC5F00B07355 /* TransportHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF7277EBC5F00B07355 /* TransportHomeViewController.swift */; };
-		157D6B03277EBC5F00B07355 /* TransportHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF8277EBC5F00B07355 /* TransportHomeRouter.swift */; };
-		157D6B04277EBC5F00B07355 /* TransportHomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AF9277EBC5F00B07355 /* TransportHomeBuilder.swift */; };
-		157D6B05277EBC5F00B07355 /* TransportHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AFA277EBC5F00B07355 /* TransportHomeInteractor.swift */; };
-		157D6B06277EBC5F00B07355 /* RideTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AFC277EBC5F00B07355 /* RideTypeView.swift */; };
-		157D6B07277EBC5F00B07355 /* SuperPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D6AFD277EBC5F00B07355 /* SuperPayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,12 +65,6 @@
 		157D6AF3277EBC5F00B07355 /* ProfileHomeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeBuilder.swift; sourceTree = "<group>"; };
 		157D6AF4277EBC5F00B07355 /* ProfileHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeViewController.swift; sourceTree = "<group>"; };
 		157D6AF5277EBC5F00B07355 /* ProfileHomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHomeInteractor.swift; sourceTree = "<group>"; };
-		157D6AF7277EBC5F00B07355 /* TransportHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHomeViewController.swift; sourceTree = "<group>"; };
-		157D6AF8277EBC5F00B07355 /* TransportHomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHomeRouter.swift; sourceTree = "<group>"; };
-		157D6AF9277EBC5F00B07355 /* TransportHomeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHomeBuilder.swift; sourceTree = "<group>"; };
-		157D6AFA277EBC5F00B07355 /* TransportHomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHomeInteractor.swift; sourceTree = "<group>"; };
-		157D6AFC277EBC5F00B07355 /* RideTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideTypeView.swift; sourceTree = "<group>"; };
-		157D6AFD277EBC5F00B07355 /* SuperPayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperPayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +79,7 @@
 				131A409127842DAB00832C2A /* Topup in Frameworks */,
 				131A408B2784175500832C2A /* CombineUtil in Frameworks */,
 				131A40872784175500832C2A /* FinanceEntity in Frameworks */,
+				132DF60D27852949005CBC96 /* TransportHome in Frameworks */,
 				132DF60B278440EC005CBC96 /* FinanceHome in Frameworks */,
 				1340D0112772E4C0000104B0 /* ModernRIBs in Frameworks */,
 				131A408D2784175500832C2A /* RIBsUtil in Frameworks */,
@@ -128,7 +118,6 @@
 				1340D0122772E8CA000104B0 /* AppDelegate */,
 				1340D0152772E96A000104B0 /* AppRoot */,
 				1340D021277303D1000104B0 /* AppHome */,
-				157D6AF6277EBC5F00B07355 /* TransportHome */,
 				157D6AF1277EBC5F00B07355 /* ProfileHome */,
 				1340D0042772E01E000104B0 /* Assets.xcassets */,
 				1340D0062772E01E000104B0 /* LaunchScreen.storyboard */,
@@ -204,27 +193,6 @@
 			path = ProfileHome;
 			sourceTree = "<group>";
 		};
-		157D6AF6277EBC5F00B07355 /* TransportHome */ = {
-			isa = PBXGroup;
-			children = (
-				157D6AF7277EBC5F00B07355 /* TransportHomeViewController.swift */,
-				157D6AF8277EBC5F00B07355 /* TransportHomeRouter.swift */,
-				157D6AF9277EBC5F00B07355 /* TransportHomeBuilder.swift */,
-				157D6AFA277EBC5F00B07355 /* TransportHomeInteractor.swift */,
-				157D6AFB277EBC5F00B07355 /* Views */,
-			);
-			path = TransportHome;
-			sourceTree = "<group>";
-		};
-		157D6AFB277EBC5F00B07355 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				157D6AFC277EBC5F00B07355 /* RideTypeView.swift */,
-				157D6AFD277EBC5F00B07355 /* SuperPayView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,6 +221,7 @@
 				131A409027842DAB00832C2A /* Topup */,
 				131A40942784327500832C2A /* FoundationUtil */,
 				132DF60A278440EC005CBC96 /* FinanceHome */,
+				132DF60C27852949005CBC96 /* TransportHome */,
 			);
 			productName = SuperApp;
 			productReference = 1340CFF82772E01C000104B0 /* SuperApp.app */;
@@ -314,20 +283,14 @@
 			files = (
 				157D6AFF277EBC5F00B07355 /* ProfileHomeBuilder.swift in Sources */,
 				157D6AFE277EBC5F00B07355 /* ProfileHomeRouter.swift in Sources */,
-				157D6B05277EBC5F00B07355 /* TransportHomeInteractor.swift in Sources */,
 				1340D026277303FD000104B0 /* AppHomeRouter.swift in Sources */,
-				157D6B07277EBC5F00B07355 /* SuperPayView.swift in Sources */,
 				1340D02E27730A28000104B0 /* HomeWidgetView.swift in Sources */,
-				157D6B02277EBC5F00B07355 /* TransportHomeViewController.swift in Sources */,
-				157D6B03277EBC5F00B07355 /* TransportHomeRouter.swift in Sources */,
-				157D6B04277EBC5F00B07355 /* TransportHomeBuilder.swift in Sources */,
 				1340D027277303FD000104B0 /* AppHomeViewController.swift in Sources */,
 				1340CFFC2772E01C000104B0 /* AppDelegate.swift in Sources */,
 				1340D028277303FD000104B0 /* AppHomeBuilder.swift in Sources */,
 				1340D0142772E905000104B0 /* AppComponent.swift in Sources */,
 				1340D03127730A4E000104B0 /* HomeWidgetModel.swift in Sources */,
 				1340D0192772E994000104B0 /* AppRootRouter.swift in Sources */,
-				157D6B06277EBC5F00B07355 /* RideTypeView.swift in Sources */,
 				1340D01A2772E994000104B0 /* AppRootBuilder.swift in Sources */,
 				157D6B01277EBC5F00B07355 /* ProfileHomeInteractor.swift in Sources */,
 				1340D01B2772E994000104B0 /* AppRootInteractor.swift in Sources */,
@@ -599,6 +562,10 @@
 		132DF60A278440EC005CBC96 /* FinanceHome */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FinanceHome;
+		};
+		132DF60C27852949005CBC96 /* TransportHome */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TransportHome;
 		};
 		1340D0102772E4C0000104B0 /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;
