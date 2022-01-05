@@ -9,13 +9,18 @@ let package = Package(
     products: [
         .library(
             name: "TransportHome",
-            targets: ["TransportHome"]),
+            targets: ["TransportHome"]
+        ),
     ],
     dependencies: [
     ],
     targets: [
         .target(
             name: "TransportHome",
-            dependencies: []),
+            dependencies: [],
+            resources: [
+                .process("Resources")
+            ]
+        ),
     ]
 )
