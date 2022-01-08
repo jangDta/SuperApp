@@ -52,6 +52,7 @@
 		13DBBA422782E632002A21BB /* Transport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transport; sourceTree = "<group>"; };
 		13DBBA432782E675002A21BB /* Profile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Profile; sourceTree = "<group>"; };
 		13DBBA442782E693002A21BB /* Platform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Platform; sourceTree = "<group>"; };
+		157D6B082789D1E300B07355 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		1340CFEF2772E01C000104B0 = {
 			isa = PBXGroup;
 			children = (
+				157D6B082789D1E300B07355 /* Color.xcassets */,
 				13DBBA442782E693002A21BB /* Platform */,
 				13DBBA432782E675002A21BB /* Profile */,
 				13DBBA422782E632002A21BB /* Transport */,
