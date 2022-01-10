@@ -8,6 +8,7 @@
 import ModernRIBs
 import Combine
 import FinanceRepository
+import Foundation
 
 protocol CardOnFileDashboardRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
@@ -53,6 +54,7 @@ final class CardOnFileDashboardInteractor: PresentableInteractor<CardOnFileDashb
         super.didBecomeActive()
         
         dependency.cardOnFileRepository.cardOnFile
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] models in
                 let viewModels = models.prefix(5).map { PaymentViewModel($0) }
                 self?.presenter.updatePayment(with: viewModels)
