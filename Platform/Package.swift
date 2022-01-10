@@ -7,7 +7,6 @@ let package = Package(
     name: "Platform",
     platforms: [.iOS(.v14)],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "CombineUtil",
             targets: ["CombineUtil"]
@@ -24,16 +23,24 @@ let package = Package(
             name: "UIUtil",
             targets: ["UIUtil"]
         ),
+        .library(
+            name: "DefaultsStore",
+            targets: ["DefaultsStore"]
+        ),
+        .library(
+            name: "Network",
+            targets: ["Network"]
+        ),
+        .library(
+            name: "NetworkImp",
+            targets: ["NetworkImp"]
+        ),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/CombineCommunity/CombineExt", from: "1.0.0"),
         .package(name: "ModernRIBs", url: "https://github.com/DevYeom/ModernRIBs", .exact("1.0.1"))
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "CombineUtil",
             dependencies: [
@@ -55,6 +62,20 @@ let package = Package(
             dependencies: [
                 "RIBsUtil",
                 "FoundationUtil"
+            ]
+        ),
+        .target(
+            name: "DefaultsStore",
+            dependencies: []
+        ),
+        .target(
+            name: "Network",
+            dependencies: []
+        ),
+        .target(
+            name: "NetworkImp",
+            dependencies: [
+                "Network"
             ]
         ),
     ]
