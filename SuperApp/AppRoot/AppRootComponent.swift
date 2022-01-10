@@ -60,6 +60,8 @@ final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, F
             network: network,
             baseUrl: BaseURL.financeBaseURL
         )
+        cardOnFileRepository.fetch()
+        
         self.superPayRepository = SuperPayRepositoryImpl(
             network: network,
             baseUrl: BaseURL.financeBaseURL
