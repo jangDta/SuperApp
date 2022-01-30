@@ -7,6 +7,7 @@
 
 import Foundation
 import CombineUtil
+import CombineSchedulers
 import FinanceEntity
 import FinanceRepository
 import FinanceRepositoryTestSupport
@@ -38,6 +39,10 @@ final class EnterAmountPresentableMock: EnterAmountPresentable {
 }
 
 final class EnterAmountDependencyMock: EnterAmountInteractorDependency {
+    var mainQueue: AnySchedulerOf<DispatchQueue> {
+        .immediate
+    }
+    
     var selectedPayment: ReadOnlyCurrentValuePublisher<PaymentModel> {
         selectedPaymentSubject
     }
