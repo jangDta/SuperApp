@@ -7,11 +7,13 @@
 
 @testable import TopupImp
 import XCTest
+import TopupTestSupport
 
 final class TopupInteractorTests: XCTestCase {
 
     private var sut: TopupInteractor!
     private var dependency: TopupDependencyMock!
+    private var listener: TopupListenerMock!
 
     // TODO: declare other objects and mocks you need as private vars
 
@@ -19,7 +21,10 @@ final class TopupInteractorTests: XCTestCase {
         super.setUp()
         
         dependency = TopupDependencyMock()
+        listener = TopupListenerMock()
+        
         sut = TopupInteractor(dependency: dependency)
+        sut.listener = listener
     }
 
     // MARK: - Tests
