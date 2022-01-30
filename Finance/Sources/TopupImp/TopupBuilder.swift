@@ -11,6 +11,7 @@ import FinanceEntity
 import AddPaymentMethod
 import CombineUtil
 import Topup
+import CombineSchedulers
 
 public protocol TopupDependency: Dependency {
     // Topup RIB을 띄운 RIB에서 지정해줄 ViewControllable
@@ -18,11 +19,16 @@ public protocol TopupDependency: Dependency {
     var cardOnFileRepository: CardOnFileRepository { get }
     var superPayRepository: SuperPayRepository { get }
     var addPaymentMethodBuildable: AddPaymentMethodBuildable { get }
+    var mainQueue: AnySchedulerOf<DispatchQueue> { get }
 }
 
 final class TopupComponent: Component<TopupDependency>, TopupInteractorDependency, EnterAmountDependency, CardOnFileDependency {
     fileprivate var topupBaseViewController: ViewControllable {
-        return dependency.topupBaseViewController
+        dependency.topupBaseViewController
+    }
+    
+    var mainQueue: AnySchedulerOf<DispatchQueue> {
+        dependency.mainQueue
     }
     
     var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }

@@ -9,18 +9,18 @@ import ModernRIBs
 import CombineUtil
 import FinanceEntity
 import FinanceRepository
+import CombineSchedulers
 
 protocol EnterAmountDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
     var selectedPayment: ReadOnlyCurrentValuePublisher<PaymentModel> { get }
     var superPayRepository: SuperPayRepository { get }
+    var mainQueue: AnySchedulerOf<DispatchQueue> { get }
 }
 
 final class EnterAmountComponent: Component<EnterAmountDependency>, EnterAmountInteractorDependency {
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
     var selectedPayment: ReadOnlyCurrentValuePublisher<PaymentModel> { dependency.selectedPayment }
     var superPayRepository: SuperPayRepository { dependency.superPayRepository }
+    var mainQueue: AnySchedulerOf<DispatchQueue> { dependency.mainQueue }
 }
 
 // MARK: - Builder
