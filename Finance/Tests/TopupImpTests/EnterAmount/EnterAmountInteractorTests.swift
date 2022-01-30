@@ -19,7 +19,7 @@ final class EnterAmountInteractorTests: XCTestCase {
     private var listener: EnterAmountListenerMock!
     
     private var repository: SuperPayRepositoryMock! {
-        dependency.superPayRepository as! SuperPayRepositoryMock
+        dependency.superPayRepository as? SuperPayRepositoryMock
     }
 
     override func setUp() {
@@ -81,5 +81,47 @@ final class EnterAmountInteractorTests: XCTestCase {
         XCTAssertEqual(repository.topupAmount, 1_000_000)
         XCTAssertEqual(repository.topupPaymentMethodID, "id_0")
         XCTAssertEqual(listener.enterAmountDidFinishTopupCallCount, 1)
+    }
+    
+    func test_didTapTopup_fail() {
+        // Given
+        let paymentModel = PaymentModel(
+            id: "id_0",
+            name: "name_0",
+            digits: "digits_0",
+            color: "color_0",
+            isPrimary: false
+        )
+        
+        dependency.selectedPaymentSubject.send(paymentModel)
+        repository.shouldTopupSucceed = false
+        
+        // When
+        sut.didTapTopup(with: 1_000_000)
+        
+        // Then
+        XCTAssertEqual(presenter.startLoadingCallCount, 1)
+        XCTAssertEqual(presenter.stopLoadingCallCount, 1)
+        XCTAssertEqual(listener.enterAmountDidFinishTopupCallCount, 0)
+    }
+    
+    func test_didTapClose() {
+        // Given
+        
+        // When
+        sut.didTapClose()
+        
+        // Then
+        XCTAssertEqual(listener.enterAmountDidTapCloseCallCount, 1)
+    }
+    
+    func test_didTapPaymentMethod() {
+        // Given
+        
+        // When
+        sut.didTapPaymentMethod()
+        
+        // Then
+        XCTAssertEqual(listener.enterAmountDidTapPaymentMethodCallCount, 1)
     }
 }
